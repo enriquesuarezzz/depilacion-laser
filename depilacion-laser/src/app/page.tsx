@@ -1,3 +1,4 @@
+import { CardsSection } from '@/components/molecules/CardsSection.tsx/CardsSection'
 import { ImagesSliderComponent } from '@/components/molecules/ImagesSlider.tsx/ImagesSliderComponent'
 import { ImagesSlider } from '@/components/molecules/ImagesSlider.tsx/ImagesSliderLogic'
 import { NavbarComponent } from '@/components/molecules/Navbar/NavbarComponent'
@@ -9,6 +10,7 @@ export default function Home() {
     <main className="h-full w-full">
       <ImagesSliderComponent />
       <NavbarComponent />
+      <CardsSection />
     </main>
   )
 }

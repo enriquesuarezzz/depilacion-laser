@@ -5,8 +5,8 @@ import { cn } from '@/utils/cn'
 
 export function NavbarComponent() {
   return (
-    <div className="relative flex w-full items-center justify-center">
-      <Navbar className="top-2" />
+    <div className="relative flex w-full items-center justify-center ">
+      <Navbar className="top-2 " />
     </div>
   )
 }
@@ -19,12 +19,12 @@ function Navbar({ className }: { className?: string }) {
     >
       <Menu setActive={setActive}>
         <MenuItem setActive={setActive} active={active} item="Más Información">
-          <div className="flex flex-col space-y-4 text-sm">
+          <div className="flex flex-col space-y-4  text-sm">
             <HoveredLink href="/web-dev">
               ¿Por qué depilación laser SHR?
             </HoveredLink>
             <HoveredLink href="/interface-design">Ventajas</HoveredLink>
-            <HoveredLink href="/seo">Opiniones</HoveredLink>
+            <HoveredLink href="/seo">Preguntas frecuentes</HoveredLink>
           </div>
         </MenuItem>
         <MenuItem setActive={setActive} active={active} item="Ofertas">
