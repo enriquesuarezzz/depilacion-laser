@@ -59,7 +59,7 @@ const dummyContent = [
       </>
     ),
     badge: '¿Por qué depilación laser SHR?',
-    image: `/images/card1.jpg`,
+    image: `/images/card_section/card1.jpg`,
   },
   {
     title: '¿Por qué deberías empezar hoy?',
@@ -87,7 +87,7 @@ const dummyContent = [
     ),
     badge: 'Ventajas',
 
-    image: '/images/card2.jpg',
+    image: '/images/card_section/card2.jpg',
   },
   {
     title: '¿Todavía tienes dudas?',
@@ -117,6 +117,6 @@ const dummyContent = [
       </>
     ),
     badge: 'Preguntas frecuentes',
-    image: '/images/card3.jpeg',
+    image: '/images/card_section/card3.jpeg',
   },
 ]
