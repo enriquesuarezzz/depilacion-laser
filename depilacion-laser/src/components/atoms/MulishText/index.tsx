@@ -6,7 +6,7 @@ export interface MulishTextProps {
   text: string
   tag?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p'
   style?: 'regular' | 'medium'
-  fontSize?: '14px' | '16px|14px' | '40px|30px|20px' | '70px|50px|25px'
+  fontSize?: '14px' | `16px` | '16px|14px' | '40px|30px|20px' | '70px|50px|25px'
   className?: string
 }
 
@@ -32,6 +32,8 @@ export const MulishText = forwardRef<
       switch (fontSize) {
         case '14px':
           return 'text-sm'
+        case '16px':
+          return 'text-base'
         case '16px|14px':
           return 'text-sm sm:text-base'
         case '70px|50px|25px':

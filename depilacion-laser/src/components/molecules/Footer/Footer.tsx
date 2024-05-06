@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export default function Footer() {
   return (
-    <div className="w-full items-center bg-white shadow dark:bg-gray-900">
+    <footer className="bottom-0 flex w-full items-center bg-white shadow dark:bg-gray-900">
       <div className="mx-auto  max-w-screen-xl items-center p-4 md:py-8">
         <div className="flex items-center justify-between">
           <div className="mb-6 flex w-full  items-center justify-center text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
@@ -25,6 +25,6 @@ export default function Footer() {
           className="block text-sm text-gray-500 sm:text-center dark:text-gray-400"
         />
       </div>
-    </div>
+    </footer>
   )
 }
