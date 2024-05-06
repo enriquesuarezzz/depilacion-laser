@@ -39,3 +39,4 @@ Cosas para cambiar en modo desarrollo
 -.env
 -ruta de imagenes de CardsSection
 -seo(sitemap, favicon, nombre etc)
+--update or delete next.config.js
