@@ -1,6 +1,6 @@
 import { MulishText } from '@/components/atoms/MulishText'
 import SectionLayout from '@/components/atoms/SectionLayout/SectionLayout'
-import ContactForm from '@/components/molecules/ContactForm/ContactForm'
+import ContactForm from '@/components/molecules/Contact/Contact'
 import { ImagesSliderComponent } from '@/components/molecules/ImagesSlider.tsx/ImagesSliderComponent'
 import { ImagesSlider } from '@/components/molecules/ImagesSlider.tsx/ImagesSliderLogic'
 import { Metadata } from 'next'
