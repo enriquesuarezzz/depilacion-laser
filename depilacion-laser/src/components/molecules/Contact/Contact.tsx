@@ -6,7 +6,9 @@ import { sendEmail } from '@/utils/send-email'
 
 export type FormData = {
   name: string
+  surname: string
   email: string
+  phone: string
   message: string
 }
 
@@ -18,55 +20,81 @@ const ContactForm: FC = () => {
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <div className="mb-5">
-        <label
-          htmlFor="name"
-          className="mb-3 block text-base font-medium text-black"
-        >
-          Full Name
-        </label>
-        <input
-          type="text"
-          placeholder="Full Name"
-          className="w-full rounded-md border border-gray-300 bg-white px-6 py-3 text-base font-medium text-gray-700 outline-none focus:border-purple-500 focus:shadow-md"
-          {...register('name', { required: true })}
-        />
-      </div>
-      <div className="mb-5">
-        <label
-          htmlFor="email"
-          className="mb-3 block text-base font-medium text-black"
-        >
-          Email Address
-        </label>
-        <input
-          type="email"
-          placeholder="example@domain.com"
-          className="w-full rounded-md border border-gray-300 bg-white px-6 py-3 text-base font-medium text-gray-700 outline-none focus:border-purple-500 focus:shadow-md"
-          {...register('email', { required: true })}
-        />
-      </div>
-      <div className="mb-5">
-        <label
-          htmlFor="message"
-          className="mb-3 block text-base font-medium text-black"
-        >
-          Message
-        </label>
-        <textarea
-          rows={4}
-          placeholder="Type your message"
-          className="w-full resize-none rounded-md border border-gray-300 bg-white px-6 py-3 text-base font-medium text-gray-700 outline-none focus:border-purple-500 focus:shadow-md"
-          {...register('message', { required: true })}
-        ></textarea>
-      </div>
-      <div>
-        <button className="hover:shadow-form rounded-md bg-purple-500 px-8 py-3 text-base font-semibold text-white outline-none">
-          Submit
-        </button>
-      </div>
-    </form>
+    <>
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <div className="grid gap-4 lg:gap-6">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:gap-6">
+            <div>
+              <label className="mb-2 block text-sm font-medium text-white">
+                Nombre
+              </label>
+              <input
+                type="text"
+                className="block w-full  rounded-lg px-4 py-3 text-sm text-neutral-400 "
+                {...register('name', { required: true })}
+              />
+            </div>
+
+            <div>
+              <label className="mb-2 block text-sm font-medium text-white">
+                Apellidos
+              </label>
+              <input
+                type="text"
+                className="block w-full rounded-lg border-gray-200 px-4 py-3 text-sm  text-neutral-400 disabled:opacity-50"
+                {...register('surname', { required: true })}
+              />
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:gap-6">
+            <div>
+              <label className="mb-2 block text-sm font-medium text-white">
+                Correo Electrónico
+              </label>
+              <input
+                type="email"
+                autoComplete="email"
+                className="block w-full rounded-lg border-gray-200 px-4 py-3 text-sm  text-neutral-400 disabled:opacity-50"
+                {...register('email', { required: true })}
+              />
+            </div>
+
+            <div>
+              <label className="mb-2 block text-sm font-medium text-white">
+                Número de Teléfono
+              </label>
+              <input
+                type="tel"
+                className="block w-full rounded-lg border-gray-200 px-4 py-3 text-sm  text-neutral-400 disabled:opacity-50"
+                {...register('phone', { required: true })}
+              />
+            </div>
+          </div>
+
+          <div>
+            <label className="mb-2 block text-sm font-medium text-white">
+              Escriba su consulta
+            </label>
+            <textarea
+              id="hs-about-contacts-1"
+              name="hs-about-contacts-1"
+              rows={4}
+              className="block w-full rounded-lg border-gray-200 px-4 py-3 text-sm  text-neutral-400 disabled:opacity-50"
+            ></textarea>
+          </div>
+        </div>
+
+        <div className="mt-6 grid">
+          <button
+            type="submit"
+            className="inline-flex w-full items-center justify-center gap-x-2 rounded-lg border border-transparent bg-blue-600 px-4 py-3 text-sm font-semibold text-white hover:bg-blue-700  disabled:opacity-50"
+          >
+            Send inquiry
+          </button>
+        </div>
+      </form>
+    </>
   )
 }
 
