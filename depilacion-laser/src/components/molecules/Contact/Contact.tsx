@@ -77,10 +77,9 @@ const ContactForm: FC = () => {
               Escriba su consulta
             </label>
             <textarea
-              id="hs-about-contacts-1"
-              name="hs-about-contacts-1"
               rows={4}
               className="block w-full rounded-lg border-gray-200 px-4 py-3 text-sm  text-neutral-400 disabled:opacity-50"
+              {...register('message', { required: true })}
             ></textarea>
           </div>
         </div>
@@ -90,7 +89,7 @@ const ContactForm: FC = () => {
             type="submit"
             className="inline-flex w-full items-center justify-center gap-x-2 rounded-lg border border-transparent bg-blue-600 px-4 py-3 text-sm font-semibold text-white hover:bg-blue-700  disabled:opacity-50"
           >
-            Send inquiry
+            Enviar
           </button>
         </div>
       </form>

@@ -1,9 +1,11 @@
 import { type NextRequest, NextResponse } from 'next/server'
 import nodemailer from 'nodemailer'
 import Mail from 'nodemailer/lib/mailer'
+import { Toaster, toast } from 'sonner'
+import ContactForm from '@/components/molecules/Contact/Contact'
 
 export async function POST(request: NextRequest) {
-  const { email, name, message } = await request.json()
+  const { email, name, message, surname, phone } = await request.json()
 
   const transport = nodemailer.createTransport({
     service: 'gmail',
@@ -15,11 +17,12 @@ export async function POST(request: NextRequest) {
 
   const mailOptions: Mail.Options = {
     from: process.env.MY_EMAIL,
-    to: process.env.MY_EMAIL,
-    // cc: email, (uncomment this line if you want to send a copy to the sender)
-    subject: `Message from ${name} (${email})`,
-    text: message,
+    to: process.env.DESTINY_EMAIL,
+    subject: `Nuevo mensaje de: ${name} (${email})`,
+    text: `Te ha escrito: \n ${name} ${surname} \n ${phone} \n ${email} \n ${message}`,
   }
+
+  const email_sent = false
 
   const sendMailPromise = () =>
     new Promise<string>((resolve, reject) => {
@@ -34,7 +37,7 @@ export async function POST(request: NextRequest) {
 
   try {
     await sendMailPromise()
-    return NextResponse.json({ message: 'Email sent' })
+    return email_sent =  {true}
   } catch (err) {
     return NextResponse.json({ error: err }, { status: 500 })
   }
