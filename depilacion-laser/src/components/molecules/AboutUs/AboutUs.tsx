@@ -1,23 +1,21 @@
-
-import { MulishText } from '@/components/atoms/MulishText';
-import Image from 'next/image';
+import { MulishText } from '@/components/atoms/MulishText'
+import Image from 'next/image'
 
 export default function AboutUS() {
-    return( 
-        
-    <div className="flex w-full max-h-[500px] flex-row items-center gap-4 md:gap-10 lg:gap-20">
-      <div className="flex flex-row items-center max-h-[500px]">
+  return (
+    <div
+      className="flex max-h-[500px] w-full flex-row items-center gap-4 md:gap-10 lg:gap-20"
+      id="about_us"
+    >
+      <div className="flex max-h-[500px] flex-row items-center">
         {/* Section image */}
         <Image
-          src={
-            process.env.NEXT_PUBLIC_IMAGES_PATH +
-            '/images/about_us.jpg'
-          }
+          src={process.env.NEXT_PUBLIC_IMAGES_PATH + '/images/about_us.jpg'}
           alt={'About Us Image'}
           width={500}
           height={300}
           unoptimized
-          className=" object-contain h-[500px]"
+          className=" h-[500px] object-contain"
         />
       </div>
       <div className="flex max-w-[200px] flex-col md:max-w-[540px]">
@@ -41,6 +39,5 @@ export default function AboutUS() {
         />
       </div>
     </div>
-    )
-
+  )
 }
