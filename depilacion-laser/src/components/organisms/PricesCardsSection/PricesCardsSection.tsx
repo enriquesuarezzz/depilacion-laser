@@ -10,7 +10,7 @@ export function PricesCardsSection() {
     process.env.NEXT_PUBLIC_IMAGES_PATH +
     '/images/prices_cards_section/depilation_example1.jpg'
   return (
-    <div className="flex flex-wrap gap-20">
+    <div className="flex flex-wrap gap-20 " id="offers">
       <div className="relative flex h-[40rem] items-center justify-center">
         <DirectionAwareHover imageUrl={imageUrl}>
           <p className="text-xl font-bold">In the mountains</p>

@@ -9,7 +9,11 @@ export function CardsSection() {
     <TracingBeam className="px-6">
       <div className="relative mx-auto max-w-2xl pt-4 antialiased">
         {dummyContent.map((item, index) => (
-          <div key={`content-${index}`} className="mb-10">
+          <div
+            key={`content-${index}`}
+            id={`card-${index.toString()}`}
+            className="mb-10"
+          >
             <h2 className="mb-4 w-fit rounded-full bg-black px-4 py-1 text-sm text-white">
               {item.badge}
             </h2>

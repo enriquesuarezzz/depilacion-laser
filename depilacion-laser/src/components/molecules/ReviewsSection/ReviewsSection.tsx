@@ -2,24 +2,20 @@ import Image from 'next/image'
 
 export default function ReviewsSection() {
   return (
-    <section className="relative py-24">
+    <section className="relative py-24" id="reviews">
       <div className="lg-6 mx-auto w-full max-w-7xl px-4 md:px-5">
         <h2 className="font-manrope mb-11 text-center text-4xl font-bold text-black">
-          People Love Us
+          Mira lo que dicen nuestros clientes
         </h2>
         <div className="mb-11 grid grid-cols-12 border-y border-gray-200 py-6">
           <div className="col-span-12 lg:col-span-10 ">
             <h5 className="font-manrope text-center text-2xl font-semibold leading-9 text-black">
-              Reviews
-              <span className="font-manrope text-center text-2xl font-semibold leading-9 text-black lg:hidden">
-                {' '}
-                & Rating
-              </span>
+              Opiniones
             </h5>
           </div>
           <div className="col-span-12 max-lg:hidden lg:col-span-2">
             <h5 className="font-manrope text-center text-2xl font-semibold leading-9 text-black">
-              Rating
+              Valoraciones
             </h5>
           </div>
         </div>
@@ -28,7 +24,9 @@ export default function ReviewsSection() {
             <div className="col-span-12 lg:col-span-10 ">
               <div className="gap-6 sm:flex">
                 <Image
-                  src="https://pagedone.io/asset/uploads/1704364459.png"
+                  src={
+                    process.env.NEXT_PUBLIC_IMAGES_PATH + '/images/about_us.jpg'
+                  }
                   alt="Robert image"
                   width={32}
                   height={32}
@@ -144,29 +142,7 @@ export default function ReviewsSection() {
                     workflow.{' '}
                   </p>
                   <div className="flex items-center justify-between">
-                    <div className="cursor-pointers flex items-center gap-2">
-                      <a
-                        href="javascript:;"
-                        className="cursor-pointer whitespace-nowrap text-lg font-semibold leading-8 text-indigo-600"
-                      >
-                        View & Reply
-                      </a>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="22"
-                        height="22"
-                        viewBox="0 0 22 22"
-                        fill="none"
-                      >
-                        <path
-                          d="M8.25324 5.49609L13.7535 10.9963L8.25 16.4998"
-                          stroke="#4F46E5"
-                          stroke-width="1.6"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </svg>
-                    </div>
+                    <div className="cursor-pointers flex items-center gap-2"></div>
                     <p className="whitespace-nowrap text-sm font-medium leading-7 text-gray-400 lg:hidden lg:text-center">
                       Nov 01, 2023
                     </p>
@@ -282,7 +258,9 @@ export default function ReviewsSection() {
             <div className="col-span-12 lg:col-span-10 ">
               <div className="gap-6 sm:flex">
                 <Image
-                  src="https://pagedone.io/asset/uploads/1704364533.png"
+                  src={
+                    process.env.NEXT_PUBLIC_IMAGES_PATH + '/images/about_us.jpg'
+                  }
                   alt="Robert image"
                   width={32}
                   height={32}
@@ -397,29 +375,7 @@ export default function ReviewsSection() {
                     devices.
                   </p>
                   <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                      <a
-                        href="javascript:;"
-                        className="cursor-pointer whitespace-nowrap text-lg font-semibold leading-8 text-indigo-600"
-                      >
-                        View & Reply
-                      </a>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="22"
-                        height="22"
-                        viewBox="0 0 22 22"
-                        fill="none"
-                      >
-                        <path
-                          d="M8.25324 5.49609L13.7535 10.9963L8.25 16.4998"
-                          stroke="#4F46E5"
-                          stroke-width="1.6"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </svg>
-                    </div>
+                    <div className="flex items-center gap-2"></div>
                     <p className="whitespace-nowrap text-sm font-medium leading-7 text-gray-400 lg:hidden lg:text-center">
                       Nov 01, 2023
                     </p>
@@ -535,7 +491,9 @@ export default function ReviewsSection() {
             <div className="col-span-12 lg:col-span-10 ">
               <div className="gap-6 sm:flex">
                 <Image
-                  src="https://pagedone.io/asset/uploads/1704364549.png"
+                  src={
+                    process.env.NEXT_PUBLIC_IMAGES_PATH + '/images/about_us.jpg'
+                  }
                   alt="Robert image"
                   width={32}
                   height={32}
@@ -650,29 +608,7 @@ export default function ReviewsSection() {
                     process.
                   </p>
                   <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                      <a
-                        href="javascript:;"
-                        className="cursor-pointer whitespace-nowrap text-lg font-semibold leading-8 text-indigo-600"
-                      >
-                        View & Reply
-                      </a>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="22"
-                        height="22"
-                        viewBox="0 0 22 22"
-                        fill="none"
-                      >
-                        <path
-                          d="M8.25324 5.49609L13.7535 10.9963L8.25 16.4998"
-                          stroke="#4F46E5"
-                          stroke-width="1.6"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </svg>
-                    </div>
+                    <div className="flex items-center gap-2"></div>
                     <p className="whitespace-nowrap text-sm font-medium leading-7 text-gray-400 lg:hidden lg:text-center">
                       Nov 01, 2023
                     </p>
@@ -788,7 +724,9 @@ export default function ReviewsSection() {
             <div className="col-span-12 lg:col-span-10 ">
               <div className="gap-6 sm:flex">
                 <Image
-                  src="https://pagedone.io/asset/uploads/1704364560.png"
+                  src={
+                    process.env.NEXT_PUBLIC_IMAGES_PATH + '/images/about_us.jpg'
+                  }
                   alt="Robert image"
                   width={32}
                   height={32}
@@ -904,29 +842,7 @@ export default function ReviewsSection() {
                     to life.{' '}
                   </p>
                   <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                      <a
-                        href="javascript:;"
-                        className="cursor-pointer whitespace-nowrap text-lg font-semibold leading-8 text-indigo-600"
-                      >
-                        View & Reply
-                      </a>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="22"
-                        height="22"
-                        viewBox="0 0 22 22"
-                        fill="none"
-                      >
-                        <path
-                          d="M8.25324 5.49609L13.7535 10.9963L8.25 16.4998"
-                          stroke="#4F46E5"
-                          stroke-width="1.6"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </svg>
-                    </div>
+                    <div className="flex items-center gap-2"></div>
                     <p className="whitespace-nowrap text-sm font-medium leading-7 text-gray-400 lg:hidden lg:text-center">
                       Nov 01, 2023
                     </p>

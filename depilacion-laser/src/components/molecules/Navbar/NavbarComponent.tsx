@@ -18,32 +18,39 @@ function Navbar({ className }: { className?: string }) {
       className={cn('fixed inset-x-0 top-10 z-50 mx-auto max-w-2xl', className)}
     >
       <Menu setActive={setActive}>
-        <MenuItem setActive={setActive} active={active} item="Más Información">
+        <MenuItem setActive={setActive} active={active} item="Inicio">
           <div className="flex flex-col space-y-4  text-sm">
-            <HoveredLink href="/web-dev">
+            <HoveredLink href="#card-0">
               ¿Por qué depilación laser SHR?
             </HoveredLink>
-            <HoveredLink href="/interface-design">Ventajas</HoveredLink>
-            <HoveredLink href="/seo">Preguntas frecuentes</HoveredLink>
+            <HoveredLink href="#card-1">Ventajas</HoveredLink>
+            <HoveredLink href="#card-2">Preguntas frecuentes</HoveredLink>
+          </div>
+        </MenuItem>
+        <MenuItem setActive={setActive} active={active} item="Equipo">
+          <div className="flex flex-col space-y-4 text-sm">
+            <HoveredLink href="/#about_us">
+              Conoce nuestra especialista
+            </HoveredLink>
           </div>
         </MenuItem>
         <MenuItem setActive={setActive} active={active} item="Ofertas">
           <div className="flex flex-col space-y-4 text-sm">
-            <HoveredLink href="/web-dev">
+            <HoveredLink href="/#offers">
               ¡Observa nuestras promociones!
             </HoveredLink>
           </div>
         </MenuItem>
         <MenuItem setActive={setActive} active={active} item="Opiniones">
           <div className="flex flex-col space-y-4 text-sm">
-            <HoveredLink href="/web-dev">
+            <HoveredLink href="/#reviews">
               ¡Expora opiniones de clientes!
             </HoveredLink>
           </div>
         </MenuItem>
         <MenuItem setActive={setActive} active={active} item="Contacto">
           <div className="flex flex-col space-y-4 text-sm">
-            <HoveredLink href="/web-dev">
+            <HoveredLink href="/contacto">
               ¿Quieres que te contemos más?
             </HoveredLink>
           </div>
