@@ -1,6 +1,6 @@
 'use client'
 
-import { FC } from 'react'
+import { FC, useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { sendEmail } from '@/utils/send-email'
 
@@ -13,10 +13,26 @@ export type FormData = {
 }
 
 const ContactForm: FC = () => {
-  const { register, handleSubmit } = useForm<FormData>()
+  const { register, handleSubmit, reset } = useForm<FormData>()
+  const [isSending, setIsSending] = useState(false)
+  const [sendError, setSendError] = useState<string | null>(null)
+  const [sendSuccess, setSendSuccess] = useState<boolean | null>(null)
 
-  function onSubmit(data: FormData) {
-    sendEmail(data)
+  const onSubmit = async (data: FormData) => {
+    setIsSending(true)
+    setSendError(null)
+    setSendSuccess(null)
+
+    try {
+      await sendEmail(data)
+      setSendSuccess(true)
+      reset() // Clear the form
+    } catch (error) {
+      console.error('Error sending email:', error)
+      setSendError('Failed to send email. Please try again later.')
+    } finally {
+      setIsSending(false)
+    }
   }
 
   return (
@@ -88,10 +104,16 @@ const ContactForm: FC = () => {
           <button
             type="submit"
             className="inline-flex w-full items-center justify-center gap-x-2 rounded-lg border border-transparent bg-blue-600 px-4 py-3 text-sm font-semibold text-white hover:bg-blue-700  disabled:opacity-50"
+            disabled={isSending}
           >
             Enviar
+            {isSending ? 'Sending...' : 'Enviar'}
           </button>
         </div>
+        {sendError && <div className="mt-4 text-red-500">{sendError}</div>}
+        {sendSuccess && (
+          <div className="mt-4 text-green-500">Email sent successfully!</div>
+        )}
       </form>
     </>
   )

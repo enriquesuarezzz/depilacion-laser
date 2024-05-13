@@ -40,3 +40,8 @@ Cosas para cambiar en modo desarrollo
 -ruta de imagenes de CardsSection
 -seo(sitemap, favicon, nombre etc)
 --update or delete next.config.js
+
+-mapa peluqueria
+-numero de telefono
+
+-antes y despues

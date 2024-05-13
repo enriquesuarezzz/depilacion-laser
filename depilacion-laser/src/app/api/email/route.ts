@@ -1,7 +1,6 @@
 import { type NextRequest, NextResponse } from 'next/server'
 import nodemailer from 'nodemailer'
 import Mail from 'nodemailer/lib/mailer'
-import { Toaster, toast } from 'sonner'
 import ContactForm from '@/components/molecules/Contact/Contact'
 
 export async function POST(request: NextRequest) {
@@ -37,8 +36,9 @@ export async function POST(request: NextRequest) {
 
   try {
     await sendMailPromise()
-    return email_sent =  {true}
+    return NextResponse.json({ email_sent })
   } catch (err) {
-    return NextResponse.json({ error: err }, { status: 500 })
+    console.error(err)
+    return NextResponse.json({ err })
   }
 }
