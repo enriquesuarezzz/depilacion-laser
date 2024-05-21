@@ -39,8 +39,8 @@ export default function OffersSwiper() {
             <div className="w-fit content-center justify-center">
               <MulishText
                 text={'¡Primera depilación al 50%!'}
-                style="regular"
-                fontSize="40px|30px|20px"
+                style="w500"
+                fontSize="40px"
               />
             </div>
           </div>

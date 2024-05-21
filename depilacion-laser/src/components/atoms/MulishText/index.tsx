@@ -5,22 +5,24 @@ import { Mulish } from 'next/font/google'
 export interface MulishTextProps {
   text: string
   tag?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p'
-  style?: 'regular' | 'medium'
-  fontSize?: '14px' | `16px` | '16px|14px' | '40px|30px|20px' | '70px|50px|25px'
+  style?: 'w400' | 'w500' | 'w700'
+  fontSize?: '14px' | '16px' | '18px' | '30px' | '40px' | '70px'
   className?: string
 }
+
+const mulish = Mulish({
+  subsets: ['latin'],
+  weight: ['400', '500', '700'],
+})
 
 export const MulishText = forwardRef<
   HTMLHeadingElement | HTMLParagraphElement,
   MulishTextProps
 >(
-  ({
-    text,
-    tag = 'p',
-    style = 'regular',
-    fontSize = '12px',
-    className = 'text-black',
-  }) => {
+  (
+    { text, tag = 'p', style = 'w500', fontSize = '16px', className = '' },
+    ref,
+  ) => {
     const textContent = useRef<HTMLParagraphElement>(null)
     useEffect(() => {
       if (textContent.current) {
@@ -34,74 +36,37 @@ export const MulishText = forwardRef<
           return 'text-sm'
         case '16px':
           return 'text-base'
-        case '16px|14px':
-          return 'text-sm sm:text-base'
-        case '70px|50px|25px':
-          return 'text-[25px] md:text[50px] lg:text-[70px]'
-        case '40px|30px|20px':
-          return 'text-[20px] md:text[30px] lg:text-[40px]'
+        case '18px':
+          return 'text-lg'
+        case '30px':
+          return 'text-[20px] md:text-[30px]'
+        case '40px':
+          return 'text-[20px] md:text-[30px] lg:text-[40px]'
+        case '70px':
+          return 'text-[25px] md:text-[50px] lg:text-[70px]'
       }
     }
 
     function getStyle() {
       switch (style) {
-        case 'regular':
-          return 'font-mulish-regular'
-        case 'medium':
-          return 'font-mulish-medium'
+        case 'w400':
+          return 'font-normal'
+        case 'w500':
+          return 'font-medium'
+        case 'w700':
+          return 'font-bold'
       }
     }
 
-    let globalStyle = ` ${getSize()} leading-normal ${getStyle()} antialiased`
+    const globalStyle = `${mulish.className} ${getSize()} leading-normal ${getStyle()} antialiased ${className}`
 
-    function getTag() {
-      switch (tag) {
-        case 'h1':
-          return (
-            <h1 ref={textContent} className={`${globalStyle} ${className}`}>
-              {text}
-            </h1>
-          )
-        case 'h2':
-          return (
-            <h2 ref={textContent} className={`${globalStyle} ${className}`}>
-              {text}
-            </h2>
-          )
-        case 'h3':
-          return (
-            <h3 ref={textContent} className={`${globalStyle} ${className}`}>
-              {text}
-            </h3>
-          )
-        case 'h4':
-          return (
-            <h4 ref={textContent} className={`${globalStyle} ${className}`}>
-              {text}
-            </h4>
-          )
-        case 'h5':
-          return (
-            <h5 ref={textContent} className={`${globalStyle} ${className}`}>
-              {text}
-            </h5>
-          )
-        case 'h6':
-          return (
-            <h6 ref={textContent} className={`${globalStyle} ${className}`}>
-              {text}
-            </h6>
-          )
-        case 'p':
-          return (
-            <p ref={textContent} className={`${globalStyle} ${className}`}>
-              {text}
-            </p>
-          )
-      }
-    }
+    const Tag = tag
 
-    return <>{getTag()}</>
+    return (
+      <Tag ref={ref} className={globalStyle}>
+        {text}
+      </Tag>
+    )
   },
 )
 

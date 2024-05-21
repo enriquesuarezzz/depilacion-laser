@@ -3,6 +3,7 @@ import React from 'react'
 import Image from 'next/image'
 import { twMerge } from 'tailwind-merge'
 import { TracingBeam } from './CardsSectionLogic'
+import { MulishText } from '@/components/atoms/MulishText'
 
 export function CardsSection() {
   return (
@@ -41,24 +42,48 @@ export function CardsSection() {
 
 const dummyContent = [
   {
-    title: 'Indolora, Efectiva y Rápida',
+    title: (
+      <MulishText
+        text="Indolora, Efectiva y Rápida"
+        fontSize="30px"
+        style="w700"
+      />
+    ),
     description: (
       <>
-        <p>
+        <MulishText
+          text="
           La tecnología SHR ofrece resultados efectivos en la reducción del
           vello no deseado, incluso en áreas grandes del cuerpo, como piernas,
           espalda y pecho, utiliza un método de calentamiento gradual, lo que
-          hace que sea mucho menos dolorosa que otros tipos de depilación láser.
+          hace que sea mucho menos dolorosa que otros tipos de depilación láser."
+          style="w400"
+          fontSize="16px"
+        />
+
+        <br />
+        <MulishText
+          text="
           Es apta para una amplia gama de tonos de piel y tipos de vello, lo que
           la hace accesible para una variedad más amplia de personas en
           comparación con otros tipos de depilación láser. La tecnología SHR
           permite tratamientos más rápidos gracias a su capacidad para barrer
           áreas más grandes de piel de manera eficiente, lo que reduce el tiempo
-          total de cada sesión. Debido a su enfoque suave y gradual, la
+          total de cada sesión."
+          style="w400"
+          fontSize="16px"
+        />
+        <br />
+        <MulishText
+          text="
+          Debido a su enfoque suave y gradual, la
           depilación láser SHR tiende a causar menos efectos secundarios, como
           irritación o quemaduras, en comparación con otros métodos de
-          depilación láser.
-        </p>
+          depilación láser."
+          style="w400"
+          fontSize="16px"
+        />
+
         <br />
       </>
     ),
@@ -66,27 +91,101 @@ const dummyContent = [
     image: `/images/card_section/card1.jpg`,
   },
   {
-    title: '¿Por qué deberías empezar hoy?',
+    title: (
+      <MulishText
+        text="¿Por qué deberías empezar hoy?"
+        fontSize="30px"
+        style="w700"
+      />
+    ),
     description: (
       <>
-        <p>
-          Las ventajas de la depilación láser SHR incluyen: <br /> <br />
-          <b> Efectividad </b>: Proporciona resultados duraderos al reducir
-          significativamente el crecimiento del vello. <br /> <br />{' '}
-          <b>Menos dolorosa:</b> Su tecnología de calentamiento gradual la hace
-          más cómoda y tolerable que otros métodos de depilación láser. <br />{' '}
-          <br />
-          <b>Versatilidad:</b> Es adecuada para una amplia variedad de tonos de
-          piel y tipos de vello, lo que la hace accesible para más personas.{' '}
-          <br /> <br /> <b>Rapidez:</b> Permite tratamientos más rápidos al
-          cubrir áreas grandes de piel de manera eficiente. <br /> <br />{' '}
-          <b>Seguridad:</b> Tiende a tener menos efectos secundarios, como
+        <MulishText
+          text="
+          Las ventajas de la depilación láser SHR incluyen:"
+          style="w700"
+          fontSize="18px"
+        />
+        <br />
+        <MulishText
+          text="
+          Efectividad: "
+          style="w700"
+          fontSize="16px"
+        />
+        <MulishText
+          text="
+          Proporciona resultados duraderos al reducir
+          significativamente el crecimiento del vello.  "
+          style="w500"
+          fontSize="16px"
+        />
+        <br />
+        <MulishText
+          text="
+          Menos dolorosa: "
+          style="w700"
+          fontSize="16px"
+        />
+        <MulishText
+          text="
+          Su tecnología de calentamiento gradual la hace
+          más cómoda y tolerable que otros métodos de depilación láser. "
+          style="w500"
+          fontSize="16px"
+        />
+        <br />
+        <MulishText
+          text="
+          Versatilidad: "
+          style="w700"
+          fontSize="16px"
+        />
+        <MulishText
+          text="
+          Es adecuada para una amplia variedad de tonos de
+          piel y tipos de vello, lo que la hace accesible para más personas."
+          style="w500"
+          fontSize="16px"
+        />
+        <br />
+        <MulishText
+          text="
+          Rapidez: "
+          style="w700"
+          fontSize="16px"
+        />
+        <MulishText
+          text="
+          Permite tratamientos más rápidos al
+          cubrir áreas grandes de piel de manera eficiente."
+          style="w500"
+          fontSize="16px"
+        />
+        <br />
+        <MulishText
+          text="
+          Seguridad:"
+          style="w700"
+          fontSize="16px"
+        />
+        <MulishText
+          text="
+          Tiende a tener menos efectos secundarios, como
           irritación o quemaduras, en comparación con otros métodos de
-          depilación láser. <br /> <br />
+          depilación láser."
+          style="w500"
+          fontSize="16px"
+        />
+        <br /> <br />
+        <MulishText
+          text="
           En resumen, la depilación láser SHR ofrece una combinación única de
           efectividad, comodidad, versatilidad y seguridad, lo que la convierte
-          en una opción atractiva para la eliminación del vello no deseado.
-        </p>
+          en una opción atractiva para la eliminación del vello no deseado."
+          style="w500"
+          fontSize="16px"
+        />
       </>
     ),
     badge: 'Ventajas',
@@ -94,30 +193,49 @@ const dummyContent = [
     image: '/images/card_section/card2.jpg',
   },
   {
-    title: '¿Todavía tienes dudas?',
+    title: (
+      <MulishText text="¿Todavía tienes dudas?" fontSize="30px" style="w700" />
+    ),
     description: (
       <>
-        <p>
-          <b> ¿La depilación laser SHR duele? </b> <br /> <br />
+        <MulishText
+          text="
+          ¿La depilación laser SHR duele?"
+          style="w700"
+          fontSize="16px"
+        />
+        <br />
+        <MulishText
+          text="
           La depilación láser SHR es conocida por su relativa comodidad durante
           el tratamiento. Gracias a su tecnología de calentamiento gradual,
           muchos clientes experimentan solo una sensación de calor suave y
           tolerable durante las sesiones. Comparada con otros métodos de
           depilación láser, SHR tiende a ser menos dolorosa, lo que la convierte
           en una opción popular para aquellos que desean minimizar las molestias
-          asociadas con la eliminación del vello no deseado. <br /> <br />
-        </p>
-
-        <p>
-          <b> ¿Es permanente la depilación laser SHR? </b> <br /> <br />
+          asociadas con la eliminación del vello no deseado."
+          style="w500"
+          fontSize="16px"
+        />
+        <br />
+        <MulishText
+          text="
+          ¿Es permanente la depilación laser SHR?"
+          style="w700"
+          fontSize="16px"
+        />
+        <MulishText
+          text="
           La depilación láser SHR proporciona una eliminación permanente del
           vello, pero es posible que algunos folículos pilosos vuelvan a
           producir vello con el tiempo debido a diversos factores, como cambios
           hormonales, genéticos, reacciones a medicamentos o enfermedades. Por
           lo tanto, es normal que algunas personas necesiten sesiones de
           mantenimiento anuales o cada dos años para eliminar el vello que pueda
-          volver a crecer.
-        </p>
+          volver a crecer."
+          style="w500"
+          fontSize="16px"
+        />
       </>
     ),
     badge: 'Preguntas frecuentes',

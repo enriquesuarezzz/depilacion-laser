@@ -24,8 +24,8 @@ export default function AboutUS() {
           <div className="flex flex-row gap-2 md:gap-6 lg:items-center">
             <MulishText
               text={'Nuestra Especialista'}
-              style="regular"
-              fontSize="40px|30px|20px"
+              style="w700"
+              fontSize="40px"
               className=""
             />
           </div>
@@ -34,7 +34,7 @@ export default function AboutUS() {
             text={
               'Lorem ipsum dolor sit amet consectetur. Facilisis ipsum nibh suscipit euismod luctus tristique maecenas elit. Lectus risus sed vel proin risus at leo id tellus.  dolor sit amet consectetur. Facilisis ipsum nibh suscipit euismod luctus tristique maecenas elit. Lectus risus sed vel proin risus at leo id tellus'
             }
-            style="regular"
+            style="w500"
             fontSize="14px"
             className="pt-0 md:pt-6"
           />
@@ -44,8 +44,8 @@ export default function AboutUS() {
         <div className="flex flex-row  justify-center gap-2 md:gap-6">
           <MulishText
             text={'Nuestra Especialista'}
-            style="regular"
-            fontSize="40px|30px|20px"
+            style="w700"
+            fontSize="70px"
             className="text-center"
           />
         </div>
@@ -65,7 +65,7 @@ export default function AboutUS() {
             text={
               'Lorem ipsum dolor sit amet consectetur. Facilisis ipsum nibh suscipit euismod luctus tristique maecenas elit. Lectus risus sed vel proin risus at leo id tellus.  dolor sit amet consectetur. Facilisis ipsum nibh suscipit euismod luctus tristique maecenas elit. Lectus risus sed vel proin risus at leo id tellus'
             }
-            style="regular"
+            style="w500"
             fontSize="14px"
             className="pt-6"
           />
