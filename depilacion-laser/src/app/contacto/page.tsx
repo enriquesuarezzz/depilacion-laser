@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 export const metadata: Metadata = {
   title: 'Depilacion Laser SHR | Contacto',
-  description: 'Contacto',
+  description: 'Tu atencion es nuestra prioridad',
 }
 
 export default function ContactPage() {

@@ -18,7 +18,7 @@ function Navbar({ className }: { className?: string }) {
       className={cn('fixed inset-x-0 top-10 z-50 mx-auto max-w-2xl', className)}
     >
       <Menu setActive={setActive}>
-        <MenuItem setActive={setActive} active={active} item="Inicio">
+        <MenuItem setActive={setActive} active={active} item="Inicio" href="/">
           <div className="flex flex-col space-y-4  text-sm">
             <HoveredLink href="#card-0">
               ¿Por qué depilación laser SHR?

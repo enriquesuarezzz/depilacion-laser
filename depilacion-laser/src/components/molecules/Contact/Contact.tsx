@@ -106,7 +106,6 @@ const ContactForm: FC = () => {
             className="inline-flex w-full items-center justify-center gap-x-2 rounded-lg border border-transparent bg-blue-600 px-4 py-3 text-sm font-semibold text-white hover:bg-blue-700  disabled:opacity-50"
             disabled={isSending}
           >
-            Enviar
             {isSending ? 'Sending...' : 'Enviar'}
           </button>
         </div>
