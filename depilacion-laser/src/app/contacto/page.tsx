@@ -28,7 +28,7 @@ export default function ContactPage() {
             <div className="flex flex-col items-center justify-center pt-28">
               <MulishText
                 text="Contacto"
-                fontSize="40px|30px|20px"
+                fontSize="40px"
                 className="text-bold text-white"
               />
               <MulishText
