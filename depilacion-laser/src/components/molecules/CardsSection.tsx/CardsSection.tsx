@@ -19,7 +19,7 @@ export function CardsSection() {
               {item.badge}
             </h2>
 
-            <p className={twMerge('mb-4 text-xl')}>{item.title}</p>
+            <div className={twMerge('mb-4 text-xl')}>{item.title}</div>
 
             <div className="prose  prose-sm dark:prose-invert text-sm">
               {item?.image && (
