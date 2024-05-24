@@ -1,4 +1,5 @@
 import { MulishText } from '@/components/atoms/MulishText'
+import { IInstagram } from '@/components/atoms/Svg/IInstagram'
 import Link from 'next/link'
 
 export default function Footer() {
@@ -24,6 +25,19 @@ export default function Footer() {
           fontSize="14px"
           className="block text-sm text-gray-500 sm:text-center dark:text-gray-400"
         />
+        <div className="flex justify-center gap-2">
+          <MulishText
+            text="Created by"
+            fontSize="14px"
+            className="block text-sm text-gray-500 sm:text-center dark:text-gray-400"
+          />
+          <Link
+            href="https://www.instagram.com/enriquesuarezzz/"
+            className="my-auto flex justify-center"
+          >
+            <IInstagram color="white" />
+          </Link>
+        </div>
       </div>
     </footer>
   )
