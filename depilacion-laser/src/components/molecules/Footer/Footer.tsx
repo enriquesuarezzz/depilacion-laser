@@ -8,13 +8,16 @@ export default function Footer() {
       <div className="mx-auto  max-w-screen-xl items-center p-4 md:py-8">
         <div className="flex items-center justify-between">
           <div className="mb-6 flex w-full  items-center justify-center text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
-            <Link href="#" className="me-4 hover:underline md:me-6">
+            <Link href="/contacto" className="me-4 hover:underline md:me-6">
               Contacto
             </Link>
-            <Link href="#" className="me-4 hover:underline md:me-6">
+            <Link
+              href="/politica-de-privacidad"
+              className="me-4 hover:underline md:me-6"
+            >
               Política de Privacidad
             </Link>
-            <Link href="#" className="me-4 hover:underline md:me-6">
+            <Link href="/cookies" className="me-4 hover:underline md:me-6">
               Cookies
             </Link>
           </div>
