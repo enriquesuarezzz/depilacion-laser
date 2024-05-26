@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 import 'swiper/css/pagination'
 import Image from 'next/image'
-import { MulishText } from '@/components/atoms/MulishText'
+import { BarlowText } from '@/components/atoms/BarlowText'
 import { Pagination } from 'swiper/modules'
 import 'swiper/css/bundle'
 import Link from 'next/link'
@@ -12,10 +12,32 @@ import Link from 'next/link'
 export default function OffersSwiper() {
   const swipers = [
     {
-      image: {},
-      alt: {},
-      title: {},
-      description: {},
+      image: `${process.env.NEXT_PUBLIC_IMAGES_PATH + '/images/prices_cards_section/depilation_example1.jpg'}`,
+      alt: 'Depilation example',
+      title: '¡Primera depilación al 50%!',
+      description:
+        'Aprovecha esta oferta exclusiva y disfruta de una piel suave y sin vello. ¡No te lo pierdas!',
+    },
+    {
+      image: `${process.env.NEXT_PUBLIC_IMAGES_PATH + '/images/prices_cards_section/depilation_example1.jpg'}`,
+      alt: 'Depilation example',
+      title: '¡Primera depilación al 50%!',
+      description:
+        'Aprovecha esta oferta exclusiva y disfruta de una piel suave y sin vello. ¡No te lo pierdas!',
+    },
+    {
+      image: `${process.env.NEXT_PUBLIC_IMAGES_PATH + '/images/prices_cards_section/depilation_example1.jpg'}`,
+      alt: 'Depilation example',
+      title: '¡Primera depilación al 50%!',
+      description:
+        'Aprovecha esta oferta exclusiva y disfruta de una piel suave y sin vello. ¡No te lo pierdas!',
+    },
+    {
+      image: `${process.env.NEXT_PUBLIC_IMAGES_PATH + '/images/prices_cards_section/depilation_example1.jpg'}`,
+      alt: 'Depilation example',
+      title: '¡Primera depilación al 50%!',
+      description:
+        'Aprovecha esta oferta exclusiva y disfruta de una piel suave y sin vello. ¡No te lo pierdas!',
     },
   ]
   return (
@@ -31,17 +53,14 @@ export default function OffersSwiper() {
         modules={[Pagination]}
         className="mySwiper"
       >
-        {swipers.map((image, index) => {
+        {swipers.map((item, index) => {
           return (
             <SwiperSlide>
               <div className="flex flex-col items-center gap-6 rounded-lg  p-6 shadow-lg transition-transform duration-500 hover:scale-105 md:flex-row md:gap-12 lg:gap-16">
                 <div className="flex-shrink-0">
                   <Image
-                    src={
-                      process.env.NEXT_PUBLIC_IMAGES_PATH +
-                      '/images/prices_cards_section/depilation_example1.jpg'
-                    }
-                    alt="Depilation example"
+                    src={item.image}
+                    alt={item.alt}
                     width={300}
                     height={400}
                     unoptimized
@@ -49,18 +68,14 @@ export default function OffersSwiper() {
                   />
                 </div>
                 <div className="flex flex-col items-center justify-center gap-1 text-gray-800 md:gap-8">
-                  <MulishText
-                    text={'¡Primera depilación al 50%!'}
-                    style="w500"
+                  <BarlowText
+                    text={''}
                     fontSize="40px"
                     className="mb-4 text-center"
                   />
-                  <MulishText
-                    text={
-                      'Aprovecha esta oferta exclusiva y disfruta de una piel suave y sin vello. ¡No te lo pierdas!'
-                    }
-                    style="w500"
-                    fontSize="18px"
+                  <BarlowText
+                    text={item.description}
+                    fontSize="20px"
                     className="pb-1 text-center text-lg leading-relaxed"
                   />
                   <Link href="/contacto">

@@ -1,4 +1,4 @@
-import { MulishText } from '@/components/atoms/MulishText'
+import { BarlowText } from '@/components/atoms/BarlowText'
 import ContactForm from '@/components/molecules/Contact/Contact'
 import { Metadata } from 'next'
 import Image from 'next/image'
@@ -26,12 +26,12 @@ export default function ContactPage() {
         <div className="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-50">
           <div className="max-w-8xl mx-auto px-4 xl:px-10">
             <div className="flex flex-col items-center justify-center pt-28">
-              <MulishText
+              <BarlowText
                 text="Contacto"
                 fontSize="40px"
                 className="text-bold text-white"
               />
-              <MulishText
+              <BarlowText
                 text="¿Tienes alguna consulta?, ¿Quieres solicitar tu primera cita?, ¡No dudes en contactarnos!"
                 fontSize="16px"
                 className="text-bold pb-10 pt-6 text-white"
