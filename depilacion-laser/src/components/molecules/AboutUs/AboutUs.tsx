@@ -1,4 +1,7 @@
 import { BarlowText } from '@/components/atoms/BarlowText'
+import { IVerified } from '@/components/atoms/Svg/IVerified'
+import { IExperience } from '@/components/atoms/Svg/IExperience'
+import { IRenew } from '@/components/atoms/Svg/IRenew'
 import Image from 'next/image'
 
 export default function AboutUS() {
@@ -8,7 +11,7 @@ export default function AboutUS() {
       <Image
         src={
           process.env.NEXT_PUBLIC_IMAGES_PATH +
-          '/images/placeholder_about_us.png'
+          '/images/about_us_placeholder.jpg'
         }
         alt={'About Us Image'}
         width={1200}
@@ -16,12 +19,32 @@ export default function AboutUS() {
         unoptimized
         className="  object-contain"
       />
-      <div className="absolute bottom-[-10%] h-full max-h-[200px] w-full max-w-[1000px] bg-green-400">
-        <div className="flex flex-row gap-20">
-          <div>hola</div>
-          <div>hola</div>
-          <div>hola</div>
-          <div>hola</div>
+      <div className="absolute bottom-[-10%] flex h-full max-h-[100px] w-full max-w-[1000px] items-center rounded-2xl bg-blue-400/95 md:max-h-[150px] lg:max-h-[200px] ">
+        <div className="flex flex-row">
+          <div className="flex flex-col items-center gap-4">
+            <IVerified size={30} />
+            <BarlowText
+              text="Una autentica profesional"
+              fontSize="26px"
+              className="text-center text-white"
+            />
+          </div>
+          <div className="flex flex-col items-center gap-4">
+            <IExperience size={30} />
+            <BarlowText
+              text="mas de 20 años de expereincia en depilación"
+              fontSize="26px"
+              className="text-center text-white"
+            />
+          </div>
+          <div className="flex flex-col items-center gap-4">
+            <IRenew size={30} />
+            <BarlowText
+              text="siempre a la ultima tecnologia"
+              fontSize="26px"
+              className="text-center text-white"
+            />
+          </div>
         </div>
       </div>
     </div>
