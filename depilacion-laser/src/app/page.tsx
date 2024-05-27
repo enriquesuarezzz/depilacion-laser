@@ -44,20 +44,20 @@ export default function Home() {
     <main className="h-full w-full">
       <ImagesSliderComponent />
       <SectionLayout>
-        <div className="pb-6 pt-6">
+        <div className=" pb-6 pt-6">
           {data.map((item, index) => (
             <div key={index}>
               <TextAndImage image={item.img} reverse={index % 2 == 0}>
                 {/* contenedor */}
-                <div className="w-full flex-col items-center">
+                <div className="flex flex-col md:px-4">
                   {/* cajonsito */}
-                  <div className="bg-red mb-2 mt-4 flex h-fit w-fit items-center justify-center rounded-[4px] px-2 py-1">
+                  <div className="mb-2 mt-4 flex h-fit w-fit items-center justify-center rounded-[4px] px-2 py-1">
                     <BarlowText
                       text={
                         data[0].boxtitle || '<b>Indolora, Efectiva y Rápida</b>'
                       }
                       fontSize="16px"
-                      className="text-black"
+                      className=" text-black"
                     />
                   </div>
                   <div className="flex-col md:mt-2">
