@@ -12,7 +12,7 @@ export default function TextAndImage({ children, image, reverse, alt }: Props) {
   return (
     <>
       <section
-        className={`flex justify-between gap-4 md:items-center md:gap-0 ${reverse ? 'flex-col md:flex-row-reverse' : 'flex-col md:flex-row'}`}
+        className={`flex justify-between gap-4 md:items-center md:gap-0  ${reverse ? 'flex-col md:flex-row-reverse' : 'flex-col md:flex-row'}`}
       >
         {/* Text */}
         {children}
