@@ -49,9 +49,9 @@ export default function Home() {
             <div key={index}>
               <TextAndImage image={item.img} reverse={index % 2 == 0}>
                 {/* contenedor */}
-                <div className="flex flex-col md:px-4">
+                <div className="flex flex-col md:max-w-[50%] md:px-4">
                   {/* cajonsito */}
-                  <div className="mb-2 mt-4 flex h-fit w-fit items-center justify-center rounded-[4px] px-2 py-1">
+                  <div className="mb-2 mt-4 flex h-fit w-fit items-center justify-center rounded-[4px] py-1">
                     <BarlowText
                       text={
                         data[0].boxtitle || '<b>Indolora, Efectiva y Rápida</b>'
