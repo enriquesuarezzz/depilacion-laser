@@ -9,8 +9,8 @@ export const IExperience: React.FC<IconProps> = ({
     <svg
       version="1.1"
       id="Icons"
-      width={30}
-      height={30}
+      width={size}
+      height={size}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 32 32"
       {...attributes}

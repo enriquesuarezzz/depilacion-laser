@@ -13,23 +13,29 @@ export function NavbarComponent() {
 
 function Navbar({ className }: { className?: string }) {
   const [active, setActive] = useState<string | null>(null)
+
   return (
     <div
       className={cn('fixed inset-x-0 top-10 z-50 mx-auto max-w-2xl', className)}
     >
       <Menu setActive={setActive}>
-        <MenuItem setActive={setActive} active={active} item="Inicio" href="/">
+        <MenuItem setActive={setActive} active={active} item="Inicio">
           <div className="flex flex-col space-y-4  text-sm">
-            <HoveredLink href="#card-0">
+            <HoveredLink href="#card0">
               ¿Por qué depilación laser SHR?
             </HoveredLink>
-            <HoveredLink href="#card-1">Ventajas</HoveredLink>
-            <HoveredLink href="#card-2">Preguntas frecuentes</HoveredLink>
+            <HoveredLink href="#card1">Ventajas</HoveredLink>
+            <HoveredLink href="#card2">
+              ¿La depilación laser SHR duele?
+            </HoveredLink>
+            <HoveredLink href="#card3">
+              ¿Es permanente la depilación laser SHR?
+            </HoveredLink>
           </div>
         </MenuItem>
         <MenuItem setActive={setActive} active={active} item="Equipo">
           <div className="flex flex-col space-y-4 text-sm">
-            <HoveredLink href="/#about_us">
+            <HoveredLink href="#about_us_section">
               Conoce nuestra especialista
             </HoveredLink>
           </div>

@@ -14,34 +14,30 @@ export default function OffersSwiper() {
     {
       image: `${process.env.NEXT_PUBLIC_IMAGES_PATH + '/images/prices_cards_section/depilation_example1.jpg'}`,
       alt: 'Depilation example',
-      title: '¡Primera depilación al 50%!',
       description:
         'Aprovecha esta oferta exclusiva y disfruta de una piel suave y sin vello. ¡No te lo pierdas!',
     },
     {
-      image: `${process.env.NEXT_PUBLIC_IMAGES_PATH + '/images/prices_cards_section/depilation_example1.jpg'}`,
+      image: `${process.env.NEXT_PUBLIC_IMAGES_PATH + '/images/about_us.jpg'}`,
       alt: 'Depilation example',
-      title: '¡Primera depilación al 50%!',
       description:
-        'Aprovecha esta oferta exclusiva y disfruta de una piel suave y sin vello. ¡No te lo pierdas!',
+        'Trae a un amigo y consigue un 2x1 en una sesion de depilación. ¡No te lo pierdas!',
     },
     {
       image: `${process.env.NEXT_PUBLIC_IMAGES_PATH + '/images/prices_cards_section/depilation_example1.jpg'}`,
       alt: 'Depilation example',
-      title: '¡Primera depilación al 50%!',
       description:
-        'Aprovecha esta oferta exclusiva y disfruta de una piel suave y sin vello. ¡No te lo pierdas!',
+        '50% de descuento en todas las sesiones de depilación. ¡No te lo pierdas!',
     },
     {
-      image: `${process.env.NEXT_PUBLIC_IMAGES_PATH + '/images/prices_cards_section/depilation_example1.jpg'}`,
+      image: `${process.env.NEXT_PUBLIC_IMAGES_PATH + '/images/about_us.jpg'}`,
       alt: 'Depilation example',
-      title: '¡Primera depilación al 50%!',
       description:
         'Aprovecha esta oferta exclusiva y disfruta de una piel suave y sin vello. ¡No te lo pierdas!',
     },
   ]
   return (
-    <div className="mx-auto max-w-[1000px] px-4 pt-16">
+    <div className="mx-auto max-w-[1000px] px-4 pt-20">
       <Swiper
         spaceBetween={20}
         slidesPerView={'auto'}
@@ -83,7 +79,11 @@ export default function OffersSwiper() {
                       type="submit"
                       className="inline-flex w-fit items-center justify-center gap-x-2 rounded-lg border border-transparent bg-blue-600 px-4 py-3 text-sm font-semibold text-white hover:bg-blue-700  disabled:opacity-50"
                     >
-                      ¡Reserva ya tu cita!
+                      <BarlowText
+                        text="¡Reserva ya tu cita!"
+                        fontSize="16px"
+                        className="text-center"
+                      />
                     </button>
                   </Link>
                 </div>
