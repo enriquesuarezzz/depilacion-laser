@@ -46,7 +46,7 @@ export default function Home() {
       <SectionLayout>
         <div className=" pb-6 pt-6">
           {data.map((item, index) => (
-            <div key={index}>
+            <div key={index} id={'card' + index}>
               <TextAndImage image={item.img} reverse={index % 2 == 0}>
                 {/* contenedor */}
                 <div className="flex flex-col md:max-w-[50%] md:px-4">

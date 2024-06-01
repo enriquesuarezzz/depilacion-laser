@@ -33,14 +33,14 @@ export default function ReviewsSection() {
     },
   ]
   return (
-    <section className="relative py-24" id="reviews">
+    <section className="relative pt-10 md:pt-20" id="reviews">
       <div className="lg-6 mx-auto w-full max-w-7xl px-4 md:px-5">
         <BarlowText
           text="¿Qué opninan nuestros clientes?"
           fontSize="64px"
           className="mb-5 text-center text-black"
         />
-        <div className="mb-11 grid grid-cols-12 border-y border-gray-200 py-6">
+        <div className="mb-11 grid grid-cols-12 border-y border-gray-200 py-6 md:pl-20">
           <div className="col-span-12 lg:col-span-10 ">
             <BarlowText
               text="Opiniones"
@@ -61,7 +61,7 @@ export default function ReviewsSection() {
           <div key={index} className="grid grid-cols-1 gap-8">
             <div className="mx-auto grid max-w-sm grid-cols-12  sm:max-w-full">
               <div className="col-span-12 lg:col-span-10">
-                <div className="gap-6 sm:flex">
+                <div className="flex flex-col items-center justify-center md:flex-row ">
                   <Image
                     src={process.env.NEXT_PUBLIC_IMAGES_PATH + item.image}
                     alt="Review image, profile picture"
@@ -70,13 +70,13 @@ export default function ReviewsSection() {
                     className="h-32 w-32  rounded-2xl"
                     unoptimized
                   />
-                  <div className="text">
+                  <div className="mb-5 text-center text-black">
                     <BarlowText
                       text={item.name}
                       fontSize="24px"
-                      className="mb-5 text-center text-black"
+                      className="pb-2"
                     />
-                    <div className="mb-5 flex w-full items-center gap-2 lg:hidden lg:justify-between">
+                    <div className="mb-5 flex w-full items-center justify-center gap-2 pb-2 lg:hidden lg:justify-between">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="30"
@@ -190,7 +190,7 @@ export default function ReviewsSection() {
                 </div>
               </div>
 
-              <div className="col-span-12 flex flex-row justify-center max-lg:hidden max-lg:pt-6 lg:col-span-2 lg:flex-col lg:items-center ">
+              <div className="col-span-12 flex flex-row justify-center max-lg:hidden max-lg:pt-6  lg:col-span-2 lg:flex-col lg:items-center ">
                 <div className="mb-5 flex w-full items-center gap-2 lg:justify-between">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -291,11 +291,11 @@ export default function ReviewsSection() {
                 <BarlowText
                   text={item.date}
                   fontSize="16px"
-                  className="whitespace-nowrap  text-gray-400  lg:text-center"
+                  className="whitespace-nowrap  text-gray-400 lg:text-center"
                 />
               </div>
             </div>
-            <div className="w-full border-b border-gray-100 pb-8"></div>
+            <div className="mb-4 w-full border-b border-gray-100 "></div>
           </div>
         ))}
       </div>

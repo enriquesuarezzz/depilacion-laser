@@ -41,7 +41,10 @@ export default function AboutUS() {
 
   return (
     <section>
-      <div className="relative  hidden items-center justify-center pt-4 md:flex md:pt-10">
+      <div
+        id="about_us_section"
+        className="relative hidden items-center justify-center pt-4 md:flex md:pt-10"
+      >
         {/* Section image for md and larger screens */}
         <Image
           src={
@@ -56,7 +59,10 @@ export default function AboutUS() {
         />
         {renderCaption()}
       </div>
-      <div className="relative flex items-center justify-center pt-4 md:hidden md:pt-10">
+      <div
+        id="about_us_section"
+        className="relative  flex items-center justify-center pt-4 md:hidden md:pt-10"
+      >
         {/* Section image for mobile screens */}
         <Image
           src={process.env.NEXT_PUBLIC_IMAGES_PATH + '/images/about_us_1.jpg'}
