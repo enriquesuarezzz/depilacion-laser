@@ -2,16 +2,17 @@ import { BarlowText } from '@/components/atoms/BarlowText'
 import ContactForm from '@/components/molecules/Contact/Contact'
 import { Metadata } from 'next'
 import Image from 'next/image'
+import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Depilacion Laser SHR | Contacto',
+  title: 'Depilacion Laser Lanzarote | Contacto',
   description: 'Tu atencion es nuestra prioridad',
 }
 
 export default function ContactPage() {
   return (
     <>
-      <div className="relative h-screen ">
+      <div className="relative h-screen">
         <Image
           src={
             process.env.NEXT_PUBLIC_IMAGES_PATH +
@@ -21,92 +22,108 @@ export default function ContactPage() {
           objectFit="cover"
           unoptimized
           alt="contact us background image"
-          className=" opacity-65"
+          className="opacity-65"
         />
         <div className="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-50">
           <div className="max-w-8xl mx-auto px-4 xl:px-10">
-            <div className="flex flex-col items-center justify-center pt-28">
+            <div className="flex flex-col items-center justify-center pt-28 md:pt-16">
               <BarlowText
                 text="Contacto"
                 fontSize="40px"
-                className="text-bold text-white"
+                className="text-bold pt-6 text-white md:pt-0"
               />
               <BarlowText
                 text="¿Tienes alguna consulta?, ¿Quieres solicitar tu primera cita?, ¡No dudes en contactarnos!"
                 fontSize="16px"
-                className="text-bold pb-10 pt-6 text-white"
+                className="text-bold pb-2 pt-2 text-white md:pb-10 md:pt-6"
               />
             </div>
             <ContactForm />
           </div>
         </div>
       </div>
-      <section className=" bg-gray bottom-0 block ">
-        <div className="container mx-auto px-6 py-12">
-          <div className="mt-10 grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
-            <div>
-              <span className="inline-block rounded-full bg-blue-100/80 p-3 text-blue-500 ">
+      <section className="bg-gray bottom-0 flex items-center justify-center">
+        <div className="container mx-auto px-6 pt-6">
+          <div className="mx-auto mt-10 grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-20 lg:grid-cols-3">
+            <div className="flex flex-col items-center text-center">
+              <span className="inline-block rounded-full bg-blue-100/80 p-3 text-blue-500">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
-                  stroke-width="1.5"
+                  strokeWidth="1.5"
                   stroke="currentColor"
                   className="h-6 w-6"
                 >
                   <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
                   />
                 </svg>
               </span>
-
-              <h2 className="mt-4 text-lg font-medium text-gray-800 ">
-                Correo Electrónico
-              </h2>
-              <p className="mt-2 text-gray-500 ">
-                ¡Estaremos encantados de antenderte!
-              </p>
-              <p className="mt-2 text-blue-500 ">correoElectronico@gmail.com</p>
+              <BarlowText
+                text="Correo Electrónico"
+                fontSize="16px"
+                className="mt-4 text-lg font-medium text-gray-800"
+              />
+              <BarlowText
+                text="¡Estaremos encantados de antenderte!"
+                fontSize="16px"
+                className="mt-2 text-gray-500"
+              />
+              <Link href="mailto:correoElectronico@gmail.com">
+                <BarlowText
+                  text="correoElectronico@gmail.com"
+                  fontSize="16px"
+                  className="mt-2 text-blue-500"
+                />
+              </Link>
             </div>
 
-            <div>
-              <span className="inline-block rounded-full bg-blue-100/80 p-3 text-blue-500 ">
+            <div className="flex flex-col items-center text-center">
+              <span className="inline-block rounded-full bg-blue-100/80 p-3 text-blue-500">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
-                  stroke-width="1.5"
+                  strokeWidth="1.5"
                   stroke="currentColor"
                   className="h-6 w-6"
                 >
                   <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"
                   />
                   <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"
                   />
                 </svg>
               </span>
-
-              <h2 className="mt-4 text-lg font-medium text-gray-800 ">
-                Oficina
-              </h2>
-              <p className="mt-2 text-gray-500 ">
-                ¡Tu próximo centro de depilación!
-              </p>
-              <p className="mt-2 text-blue-500 ">
-                100 Smith Street Collingwood VIC 3066 AU
-              </p>
+              <BarlowText
+                text="Ubicación"
+                fontSize="16px"
+                className="mt-4 text-lg font-medium text-gray-800"
+              />
+              <BarlowText
+                text="¡Tu próximo centro de depilación!"
+                fontSize="16px"
+                className="mt-2 text-gray-500"
+              />
+              <Link href="https://www.google.es/maps?q=28.965169+-13.555036">
+                <BarlowText
+                  text="C/ Manolo Milares 23, 35500"
+                  fontSize="16px"
+                  className="mt-2 text-blue-500"
+                />
+              </Link>
             </div>
 
-            <div>
-              <span className="inline-block rounded-full bg-blue-100/80 p-3 text-blue-500 ">
+            <div className="flex flex-col items-center text-center">
+              <span className="inline-block rounded-full bg-blue-100/80 p-3 text-blue-500">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -122,12 +139,23 @@ export default function ContactPage() {
                   />
                 </svg>
               </span>
-
-              <h2 className="mt-4 text-lg font-medium text-gray-800">
-                Teléfono
-              </h2>
-              <p className="mt-2 text-gray-500 ">Lunes a Viernes 9am - 5pm</p>
-              <p className="mt-2 text-blue-500 ">693 736 276</p>
+              <BarlowText
+                text="Teléfono"
+                fontSize="16px"
+                className="mt-4 text-lg font-medium text-gray-800"
+              />
+              <BarlowText
+                text="Lunes a Viernes 9am - 5pm"
+                fontSize="16px"
+                className="mt-2 text-gray-500"
+              />
+              <Link href="tel:+34 693 736 276">
+                <BarlowText
+                  text="693 736 276"
+                  fontSize="16px"
+                  className="mt-2 text-blue-500"
+                />
+              </Link>
             </div>
           </div>
         </div>

@@ -6,9 +6,10 @@ import Link from 'next/link'
 
 export function ImagesSliderComponent() {
   const images = [
-    'https://images.unsplash.com/photo-1485433592409-9018e83a1f0d?q=80&w=1814&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    'https://images.unsplash.com/photo-1483982258113-b72862e6cff6?q=80&w=3456&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    'https://images.unsplash.com/photo-1482189349482-3defd547e0e9?q=80&w=2848&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    process.env.NEXT_PUBLIC_IMAGES_PATH +
+      '/images/prices_cards_section/depilation_example1.jpg',
+    process.env.NEXT_PUBLIC_IMAGES_PATH + '/images/cards_section/card2.jpg',
+    process.env.NEXT_PUBLIC_IMAGES_PATH + '/images/cards_section/card4.jpg',
   ]
   return (
     <ImagesSlider className="h-screen" images={images}>
@@ -30,9 +31,9 @@ export function ImagesSliderComponent() {
           Depilación Láser SHR <br /> 100% indolora
         </motion.p>
         <Link href={'/contacto'}>
-          <button className="relative mx-auto mt-4 rounded-full border border-emerald-500/20 bg-emerald-300/10 px-4 py-2 text-center text-white backdrop-blur-sm">
+          <button className="relative mx-auto mt-4 rounded-full border border-gray-600/40 bg-gray-600/20 px-4 py-2 text-center text-white backdrop-blur-sm">
             <span>Reserva tu cita →</span>
-            <div className="absolute inset-x-0  -bottom-px mx-auto h-px w-3/4 bg-gradient-to-r from-transparent via-emerald-500 to-transparent" />
+            <div className="via-black-600 absolute  inset-x-0 -bottom-px mx-auto h-px w-3/4 bg-gradient-to-r from-transparent to-transparent" />
           </button>
         </Link>
       </motion.div>

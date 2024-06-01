@@ -8,7 +8,7 @@ import TextAndImage from '@/components/organism/TextAndImage/TextAndImage'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Depilacion Laser SHR Lanzarote | Inicio',
+  title: 'Depilacion Laser Lanzarote | Inicio',
   description: 'Servicio de depilacion laser SHR en Lanzarote',
 }
 
