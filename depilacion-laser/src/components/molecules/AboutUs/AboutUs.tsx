@@ -17,31 +17,34 @@ export default function AboutUS() {
         width={1200}
         height={600}
         unoptimized
-        className="  object-contain"
+        className="object-contain"
       />
-      <div className="absolute bottom-[-10%] flex h-full max-h-[100px] w-full max-w-[1000px] items-center rounded-2xl bg-blue-400/95 md:max-h-[150px] lg:max-h-[200px] ">
-        <div className="flex flex-row">
-          <div className="flex flex-col items-center gap-4">
+      <div className="absolute bottom-[-10%] flex h-full max-h-[75px] w-full max-w-[1000px] items-center justify-center rounded-2xl bg-blue-400/95 md:max-h-[150px] lg:max-h-[200px] ">
+        <div className="flex flex-row gap-4 pl-1 md:pl-0">
+          <div className="flex max-w-[33%] flex-col items-center justify-center gap-1 md:gap-4">
             <IVerified size={30} />
             <BarlowText
-              text="Una autentica profesional"
+              text="Calidad y profesionalismo garantizados"
               fontSize="26px"
+              style="semibold"
               className="text-center text-white"
             />
           </div>
-          <div className="flex flex-col items-center gap-4">
+          <div className="flex max-w-[33%] flex-col items-center justify-center gap-1 md:gap-4">
             <IExperience size={30} />
             <BarlowText
-              text="mas de 20 años de expereincia en depilación"
+              text="+ de 200 sesiones de experiencia"
               fontSize="26px"
+              style="semibold"
               className="text-center text-white"
             />
           </div>
-          <div className="flex flex-col items-center gap-4">
+          <div className="flex max-w-[33%] flex-col items-center justify-center gap-1 md:gap-4">
             <IRenew size={30} />
             <BarlowText
-              text="siempre a la ultima tecnologia"
+              text="Tecnología de última generación"
               fontSize="26px"
+              style="semibold"
               className="text-center text-white"
             />
           </div>
