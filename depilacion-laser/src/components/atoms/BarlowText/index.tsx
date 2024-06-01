@@ -52,7 +52,7 @@ export const BarlowText = forwardRef<
         case '40px':
           return 'text-[24px] lg:text-[40px]'
         case '26px':
-          return 'text-[20px] lg:text-[26px]'
+          return 'text-[10px] md:text-[20px] lg:text-[26px]'
         case '24px':
           return 'text-[18px] lg:text-[24px]'
         case '20px':
