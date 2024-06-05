@@ -5,6 +5,7 @@
 html {
   scrollbar-width: smooth;
   background-color: #ffffff;
+  scroll-behavior: smooth;
 }
 
 * {
