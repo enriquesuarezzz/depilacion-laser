@@ -40,64 +40,61 @@ const ContactForm: FC = () => {
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="grid gap-4 lg:gap-6">
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:gap-6">
-            <div>
-              <label className="mb-2 block text-sm font-medium text-white">
-                Nombre
-              </label>
+            <div className="flex">
               <input
                 type="text"
-                className="block w-full  rounded-lg px-4 py-3 text-sm text-neutral-400 "
+                id="name"
+                placeholder="Nombre"
+                className="w-full border-b border-black bg-transparent pb-2 text-white placeholder-black"
+                required
                 {...register('name', { required: true })}
               />
             </div>
 
-            <div>
-              <label className="mb-2 block text-sm font-medium text-white">
-                Apellidos
-              </label>
+            <div className="flex">
               <input
                 type="text"
-                className="block w-full rounded-lg border-gray-200 px-4 py-3 text-sm  text-neutral-400 disabled:opacity-50"
+                id="surname"
+                placeholder="Apellidos"
+                className="w-full border-b border-black bg-transparent pb-2 text-white placeholder-black"
+                required
                 {...register('surname', { required: true })}
               />
             </div>
           </div>
 
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:gap-6">
-            <div>
-              <label className="mb-2 block text-sm font-medium text-white">
-                Correo Electrónico
-              </label>
+            <div className="flex">
               <input
                 type="email"
-                autoComplete="email"
-                className="block w-full rounded-lg border-gray-200 px-4 py-3 text-sm  text-neutral-400 disabled:opacity-50"
+                id="email"
+                placeholder="Email"
+                className="w-full border-b border-black bg-transparent pb-2 text-white placeholder-black"
+                required
                 {...register('email', { required: true })}
               />
             </div>
 
-            <div>
-              <label className="mb-2 block text-sm font-medium text-white">
-                Número de Teléfono
-              </label>
+            <div className="flex">
               <input
                 type="tel"
-                className="block w-full rounded-lg border-gray-200 px-4 py-3 text-sm  text-neutral-400 disabled:opacity-50"
+                id="phone"
+                placeholder="Numero de Teléfono"
+                className="w-full border-b border-black bg-transparent pb-2 text-white placeholder-black"
+                required
                 {...register('phone', { required: true })}
               />
             </div>
           </div>
 
-          <div>
-            <label className="mb-2 block text-sm font-medium text-white">
-              Escriba su consulta
-            </label>
-            <textarea
-              rows={4}
-              className="block w-full rounded-lg border-gray-200 px-4 py-3 text-sm  text-neutral-400 disabled:opacity-50"
-              {...register('message', { required: true })}
-            ></textarea>
-          </div>
+          <textarea
+            id="message"
+            name="message"
+            rows={4}
+            placeholder="Message"
+            className="font-satoshi w-full border-b border-black bg-transparent pb-2 placeholder-black"
+            required
+          ></textarea>
         </div>
 
         <div className="mt-6 grid">
