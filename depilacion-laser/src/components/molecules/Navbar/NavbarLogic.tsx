@@ -17,15 +17,19 @@ export const MenuItem = ({
   setActive,
   active,
   item,
+  index,
   children,
 }: {
   setActive: (item: string) => void
   active: string | null
   item: string
+  index: number
   children?: React.ReactNode
 }) => {
+  const isLeftAligned = index < 3 // condition to determine alignment
+
   return (
-    <div onMouseEnter={() => setActive(item)} className="relative ">
+    <div onMouseEnter={() => setActive(item)} className="relative">
       <motion.p
         transition={{ duration: 0.3 }}
         className="cursor-pointer text-black hover:opacity-[0.9] dark:text-white"
@@ -39,7 +43,9 @@ export const MenuItem = ({
           transition={transition}
         >
           {active === item && (
-            <div className="absolute left-1/2 top-[calc(100%_+_1.2rem)] -translate-x-1/2 transform pt-4">
+            <div
+              className={`absolute ${isLeftAligned ? 'left-0' : 'right-0'} top-[calc(100%_+_1.2rem)] transform overflow-x-auto pt-4`}
+            >
               <motion.div
                 transition={transition}
                 layoutId="active" // layoutId ensures smooth animation
@@ -70,7 +76,7 @@ export const Menu = ({
   return (
     <nav
       onMouseLeave={() => setActive(null)} // resets the state
-      className="boder shadow-input relative flex justify-center space-x-4 rounded-full border-transparent bg-white px-8 py-6 dark:border-white/[0.2] dark:bg-black "
+      className="shadow-input relative flex justify-center space-x-4 rounded-full border border-transparent bg-white px-8 py-6 dark:border-white/[0.2] dark:bg-black"
     >
       {children}
     </nav>
@@ -113,7 +119,7 @@ export const HoveredLink = ({ children, ...rest }: any) => {
   return (
     <Link
       {...rest}
-      className="text-neutral-700 hover:text-black dark:text-neutral-200 "
+      className="text-neutral-700 hover:text-black dark:text-neutral-200"
     >
       {children}
     </Link>
