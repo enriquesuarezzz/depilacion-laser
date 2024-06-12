@@ -1,8 +1,10 @@
 'use client'
 
 import { FC, useState } from 'react'
-import { useForm } from 'react-hook-form'
+import { useForm, SubmitHandler } from 'react-hook-form'
 import { sendEmail } from '@/utils/send-email'
+import Input from '../Input'
+import { BarlowText } from '@/components/atoms/BarlowText'
 
 export type FormData = {
   name: string
@@ -10,6 +12,7 @@ export type FormData = {
   email: string
   phone: string
   message: string
+  checkbox: boolean
 }
 
 const ContactForm: FC = () => {
@@ -18,7 +21,7 @@ const ContactForm: FC = () => {
   const [sendError, setSendError] = useState<string | null>(null)
   const [sendSuccess, setSendSuccess] = useState<boolean | null>(null)
 
-  const onSubmit = async (data: FormData) => {
+  const onSubmit: SubmitHandler<FormData> = async (data) => {
     setIsSending(true)
     setSendError(null)
     setSendSuccess(null)
@@ -26,7 +29,7 @@ const ContactForm: FC = () => {
     try {
       await sendEmail(data)
       setSendSuccess(true)
-      reset() // Clear the form
+      reset() // Clear the form fields
     } catch (error) {
       console.error('Error sending email:', error)
       setSendError('Failed to send email. Please try again later.')
@@ -35,68 +38,76 @@ const ContactForm: FC = () => {
     }
   }
 
+  // Clear success message after 3 seconds
+  if (sendSuccess) {
+    setTimeout(() => {
+      setSendSuccess(null)
+    }, 3000)
+  }
+
   return (
     <>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="grid gap-4 lg:gap-6">
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:gap-6">
             <div className="flex">
-              <input
-                type="text"
+              <Input
                 id="name"
-                placeholder="Nombre"
-                className="w-full border-b border-black bg-transparent pb-2 text-white placeholder-black"
-                required
+                label="Nombre"
                 {...register('name', { required: true })}
+                className="w-full border-b border-black"
               />
             </div>
-
             <div className="flex">
-              <input
-                type="text"
+              <Input
                 id="surname"
-                placeholder="Apellidos"
-                className="w-full border-b border-black bg-transparent pb-2 text-white placeholder-black"
-                required
+                label="Apellidos"
                 {...register('surname', { required: true })}
+                className="w-full border-b border-black"
               />
             </div>
           </div>
-
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:gap-6">
             <div className="flex">
-              <input
-                type="email"
+              <Input
                 id="email"
-                placeholder="Email"
-                className="w-full border-b border-black bg-transparent pb-2 text-white placeholder-black"
-                required
+                label="Email"
                 {...register('email', { required: true })}
+                className="w-full border-b border-black"
               />
             </div>
-
             <div className="flex">
-              <input
-                type="tel"
+              <Input
                 id="phone"
-                placeholder="Numero de Teléfono"
-                className="w-full border-b border-black bg-transparent pb-2 text-white placeholder-black"
-                required
-                {...register('phone', { required: true })}
+                label="Teléfono"
+                {...register('phone')}
+                className="w-full border-b border-black"
               />
             </div>
           </div>
-
-          <textarea
+          <Input
+            textArea={true}
             id="message"
-            name="message"
-            rows={4}
-            placeholder="Message"
-            className="font-satoshi w-full border-b border-black bg-transparent pb-2 placeholder-black"
-            required
-          ></textarea>
+            label="Message"
+            {...register('message', { required: true })}
+            className="w-full border-b border-black"
+          />
         </div>
-
+        <div className="mb-4 flex items-center justify-center">
+          <Input
+            type="checkbox"
+            id="checkbox"
+            {...register('checkbox', { required: true })}
+            className="pr-4"
+          />
+          <label htmlFor="checkbox">
+            <BarlowText
+              text={`I agree to the processing of my personal data according to our <a href='/privacy-policy' class='underline hover:text-orange'> Privacy Policy </a> `}
+              fontSize="12px"
+              className=""
+            />
+          </label>
+        </div>
         <div className="mt-6 grid">
           <button
             type="submit"
