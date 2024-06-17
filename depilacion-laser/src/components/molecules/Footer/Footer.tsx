@@ -22,13 +22,9 @@ export default function Footer() {
             </Link>
           </div>
         </div>
-        <hr className="my-6 border-gray-200 sm:mx-auto lg:my-8 dark:border-gray-700" />
-        <BarlowText
-          text="© 2024 Valeria Garritano. Todos los derechos reservados."
-          fontSize="16px"
-          className="block text-gray-500 sm:text-center dark:text-gray-400"
-        />
-        <div className="flex justify-start gap-2  pt-2 md:justify-center">
+        <hr className="my-4 border-gray-200 sm:mx-auto lg:my-8 dark:border-gray-700" />
+
+        <div className="flex  justify-center gap-2 pt-0">
           <BarlowText
             text="Created by"
             fontSize="16px"
@@ -41,9 +37,9 @@ export default function Footer() {
             <BarlowText
               text="enriquesuarezzz"
               fontSize="16px"
-              className="block text-gray-500 sm:text-center dark:text-gray-400"
+              className=" mr-2 block pb-1 text-gray-500 sm:text-center md:pb-0 dark:text-gray-400"
             />
-            <IInstagram color="white" className="my-auto ml-1" />
+            <IInstagram color="white" className="my-auto h-4 w-4" />
           </Link>
         </div>
       </div>

@@ -102,7 +102,7 @@ const ContactForm: FC = () => {
           />
           <label htmlFor="checkbox">
             <BarlowText
-              text={`I agree to the processing of my personal data according to our <a href='/privacy-policy' class='underline hover:text-orange'> Privacy Policy </a> `}
+              text={`Acepto el procesamiento de mis datos personales de acuerdo con nuestra <a href='/privacy-policy' class='underline hover:text-orange'> Política de Privacidad </a>`}
               fontSize="12px"
               className=""
             />

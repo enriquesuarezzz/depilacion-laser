@@ -51,8 +51,8 @@ export default function OffersSwiper() {
       >
         {swipers.map((item, index) => {
           return (
-            <SwiperSlide>
-              <div className="flex flex-col items-center gap-6 rounded-lg  p-6 shadow-lg transition-transform duration-500 hover:scale-105 md:flex-row md:gap-12 lg:gap-16">
+            <SwiperSlide key={index}>
+              <div className="flex flex-col items-center gap-6 rounded-lg  p-6  transition-transform duration-500 hover:scale-105 md:flex-row md:gap-12 lg:gap-16">
                 <div className="flex-shrink-0">
                   <Image
                     src={item.image}

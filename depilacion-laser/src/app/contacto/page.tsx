@@ -24,7 +24,7 @@ export default function ContactPage() {
         />
         <div className="flex flex-col items-center justify-center">
           <div className="max-w-8xl mx-auto px-4 xl:px-10">
-            <div className="flex flex-col items-center justify-center pt-28 md:pt-10">
+            <div className="flex flex-col items-center justify-center pt-2 md:pt-10">
               <BarlowText
                 text="Contacto"
                 fontSize="40px"
@@ -33,7 +33,7 @@ export default function ContactPage() {
               <BarlowText
                 text="¿Tienes alguna consulta?, ¿Quieres solicitar tu primera cita?, ¡No dudes en contactarnos!"
                 fontSize="16px"
-                className="text-bold pb-2 pt-2  md:pb-10 md:pt-6"
+                className="text-bold pb-6 pt-2  text-center md:pb-10 md:pt-6"
               />
             </div>
             <ContactForm />
