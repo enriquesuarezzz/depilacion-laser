@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import React from 'react'
 import { ImagesSlider } from './ImagesSliderLogic'
 import Link from 'next/link'
+import { BarlowText } from '@/components/atoms/BarlowText'
 
 export function ImagesSliderComponent() {
   const images = [
@@ -28,11 +29,19 @@ export function ImagesSliderComponent() {
         className="z-50 flex flex-col items-center justify-center"
       >
         <motion.p className="bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text py-4 text-center text-xl font-bold text-transparent md:text-6xl">
-          Depilación Láser SHR <br /> 100% indolora
+          <BarlowText
+            text="Depilación Laser Lanzarote"
+            fontSize="64px"
+            className="text-white"
+          />
         </motion.p>
         <Link href={'/contacto'}>
           <button className="relative mx-auto mt-4 rounded-full border border-gray-600/40 bg-gray-600/20 px-4 py-2 text-center text-white backdrop-blur-sm">
-            <span>Reserva tu cita →</span>
+            <BarlowText
+              text="Reserva tu cita →"
+              fontSize="16px"
+              className="text-white"
+            />
             <div className="via-black-600 absolute  inset-x-0 -bottom-px mx-auto h-px w-3/4 bg-gradient-to-r from-transparent to-transparent" />
           </button>
         </Link>
