@@ -1,10 +1,10 @@
 import type { Metadata } from 'next'
-import { Inter, Mulish } from 'next/font/google'
+import { Barlow, Inter, Mulish } from 'next/font/google'
 import './globals.css'
 import Footer from '@/components/molecules/Footer/Footer'
 import { NavbarComponent } from '@/components/molecules/Navbar/NavbarComponent'
 
-export const mulish = Mulish({
+export const barlow = Barlow({
   subsets: ['latin'],
   weight: ['300', '400', '600', '700'],
 })
@@ -21,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html>
-      <body className={`${mulish.className} flex flex-col gap-6`}>
+      <body className={`${barlow.className} flex flex-col`}>
         {children}
         <NavbarComponent />
         <Footer />

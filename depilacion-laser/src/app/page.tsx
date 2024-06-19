@@ -81,7 +81,6 @@ export default function Home() {
         </div>
         <AboutUS />
         <DemoSlider />
-        <ReviewsSection />
       </SectionLayout>
     </main>
   )

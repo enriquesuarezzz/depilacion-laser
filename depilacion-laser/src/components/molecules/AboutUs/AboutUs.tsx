@@ -30,8 +30,7 @@ export default function AboutUS() {
             <BarlowText
               text={item.text}
               fontSize="26px"
-              style="semibold"
-              className="text-center text-white"
+              className="text-center font-bold text-white"
             />
           </div>
         ))}
@@ -69,7 +68,6 @@ export default function AboutUS() {
           alt={'About Us Image'}
           width={1200}
           height={600}
-          unoptimized
           className="max-h-[700px] object-contain"
         />
         {renderCaption()}

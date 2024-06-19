@@ -295,7 +295,7 @@ export default function ReviewsSection() {
                 />
               </div>
             </div>
-            <div className="mb-4 w-full border-b border-gray-100 "></div>
+            <div className="mb-1 w-full border-b border-gray-100 md:mb-4 "></div>
           </div>
         ))}
       </div>
