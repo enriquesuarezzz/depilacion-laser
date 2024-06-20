@@ -2,6 +2,7 @@ import { BarlowText } from '@/components/atoms/BarlowText'
 import SectionLayout from '@/components/atoms/SectionLayout/SectionLayout'
 import AboutUS from '@/components/molecules/AboutUs/AboutUs'
 import { ImagesSliderComponent } from '@/components/molecules/ImagesSlider.tsx/ImagesSliderComponent'
+import PricesSection from '@/components/molecules/PricesSection/PricesSection'
 import ReviewsSection from '@/components/molecules/ReviewsSection/ReviewsSection'
 import DemoSlider from '@/components/molecules/offers/OffersSwiper'
 import TextAndImage from '@/components/organism/TextAndImage/TextAndImage'
@@ -81,6 +82,7 @@ export default function Home() {
         </div>
         <AboutUS />
         <DemoSlider />
+        <PricesSection />
       </SectionLayout>
     </main>
   )
