@@ -81,8 +81,9 @@ export default function Home() {
           ))}
         </div>
         <AboutUS />
-        <DemoSlider />
+
         <PricesSection />
+        <DemoSlider />
       </SectionLayout>
     </main>
   )
