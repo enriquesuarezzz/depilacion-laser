@@ -15,10 +15,12 @@ export interface BarlowTextProps {
     | '100px'
     | '64px'
     | '40px'
+    | '32px'
     | '26px'
     | '24px'
     | '20px'
     | '16px'
+    | '14px'
     | '12px'
   leading?: 'normal' | 'none' | 'tight' | 'snug' | 'relaxed' | 'loose'
   className?: string
@@ -45,22 +47,26 @@ export const BarlowText = forwardRef<
 
     function getSize() {
       switch (fontSize) {
-        case '100px':
-          return 'text-[40px] lg:text-[74px] xl:text-[100px]'
-        case '64px':
-          return 'text-[32px] lg:text-[55px] xl:text-[64px]'
-        case '40px':
-          return 'text-[24px] lg:text-[40px]'
-        case '26px':
-          return 'text-[10px] md:text-[20px] lg:text-[26px]'
-        case '24px':
-          return 'text-[18px] lg:text-[24px]'
-        case '20px':
-          return 'text-base lg:text-[20px]'
-        case '16px':
-          return 'text-[14px]'
         case '12px':
           return 'text-[12px]'
+        case '14px':
+          return 'text-[14px]'
+        case '16px':
+          return 'text-[14px]'
+        case '20px':
+          return 'text-base lg:text-[20px]'
+        case '24px':
+          return 'text-[18px] lg:text-[24px]'
+        case '26px':
+          return 'text-[10px] md:text-[20px] lg:text-[26px]'
+        case '32px':
+          return 'text-[20px] lg:text-[32px]'
+        case '40px':
+          return 'text-[20px] md:text-[24px] lg:text-[40px]'
+        case '64px':
+          return 'text-[32px] lg:text-[55px] xl:text-[64px]'
+        case '100px':
+          return 'text-[40px] lg:text-[74px] xl:text-[100px]'
       }
     }
 

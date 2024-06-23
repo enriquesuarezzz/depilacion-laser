@@ -1,48 +1,34 @@
 import { BarlowText } from '@/components/atoms/BarlowText'
+import SectionLayout from '@/components/atoms/SectionLayout/SectionLayout'
 import { IVerified } from '@/components/atoms/Svg/IVerified'
-import { IExperience } from '@/components/atoms/Svg/IExperience'
-import { IRenew } from '@/components/atoms/Svg/IRenew'
 import Image from 'next/image'
 
-export default function AboutUS() {
-  const renderCaption = () => (
-    <div className="absolute bottom-[-10%] flex h-full max-h-[100px] w-full max-w-[450px] items-center justify-center rounded-2xl bg-opacity-80 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 p-4 shadow-2xl backdrop-blur-lg md:max-h-[150px] md:w-[85%] md:max-w-[1100px] lg:max-h-[200px]">
-      <div className="flex flex-row gap-4 pl-1 md:pl-0">
-        {[
-          { icon: <IVerified size={25} />, text: 'Calidad y profesionalismo' },
-          {
-            icon: <IExperience size={25} />,
-            text: '+ de 200 sesiones de experiencia',
-          },
-          {
-            icon: <IRenew size={25} />,
-            text: 'Tecnología de última generación',
-          },
-        ].map((item, index) => (
-          <div
-            key={index}
-            className="flex max-w-[33%] flex-col items-center justify-center gap-1 md:gap-4"
-          >
-            <div className="rounded-full bg-white p-3 shadow-lg">
-              {item.icon}
-            </div>
+interface AboutUsProps {
+  title: string
+  description: string
+}
 
-            <BarlowText
-              text={item.text}
-              fontSize="26px"
-              className="text-center font-bold text-white"
-            />
-          </div>
-        ))}
-      </div>
-    </div>
-  )
+export default function AboutUs() {
+  const features = [
+    {
+      title: 'Profesionalidad  ',
+      description: 'Curso en estetica.........',
+    },
+    {
+      title: '5 años de Experiencia ',
+      description: '2000 depilaciones y más de 200 personas',
+    },
+    {
+      title: 'Última tecnología',
+      description: 'Nuestra máquina posee las mejores características',
+    },
+  ]
 
   return (
     <section>
       <div
         id="about_us_section"
-        className="relative hidden items-center justify-center pt-4 md:flex md:pt-10"
+        className="flex flex-col items-center justify-center pt-4 md:pt-10"
       >
         {/* Section image for md and larger screens */}
         <Image
@@ -50,27 +36,37 @@ export default function AboutUS() {
             process.env.NEXT_PUBLIC_IMAGES_PATH +
             '/images/about_us_placeholder.jpg'
           }
-          alt={'About Us Image'}
+          alt="About Us Image"
           width={1200}
           height={600}
           unoptimized
-          className="max-h-[700px] object-contain"
+          className="max-h-[700px] object-contain pb-10 md:pb-16"
         />
-        {renderCaption()}
-      </div>
-      <div
-        id="about_us_section"
-        className="relative  flex items-center justify-center pt-4 md:hidden md:pt-10"
-      >
-        {/* Section image for mobile screens */}
-        <Image
-          src={process.env.NEXT_PUBLIC_IMAGES_PATH + '/images/about_us_1.jpg'}
-          alt={'About Us Image'}
-          width={1200}
-          height={600}
-          className="max-h-[700px] object-contain"
-        />
-        {renderCaption()}
+
+        <div className="md:divide-dark-gray flex flex-col gap-4 md:flex-row md:divide-x lg:gap-6">
+          {features.map((feature, index) => (
+            <div
+              key={index}
+              className={`flex flex-row items-center gap-4 py-3`}
+            >
+              {/* Icon */}
+              <IVerified className="ml-2 mt-2 size-6 shrink-0 lg:size-11" />
+              {/* Text */}
+              <div className="flex flex-col ">
+                <BarlowText
+                  text={feature.title}
+                  fontSize="32px"
+                  className="text-dark-gray whitespace-nowrap"
+                />
+                <BarlowText
+                  text={feature.description}
+                  fontSize="16px"
+                  className="text-dark-gray"
+                />
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   )
