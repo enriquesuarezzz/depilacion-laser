@@ -20,6 +20,7 @@ export interface BarlowTextProps {
     | '24px'
     | '20px'
     | '16px'
+    | '14px'
     | '12px'
   leading?: 'normal' | 'none' | 'tight' | 'snug' | 'relaxed' | 'loose'
   className?: string
@@ -48,6 +49,8 @@ export const BarlowText = forwardRef<
       switch (fontSize) {
         case '12px':
           return 'text-[12px]'
+        case '14px':
+          return 'text-[14px]'
         case '16px':
           return 'text-[14px]'
         case '20px':
@@ -59,7 +62,7 @@ export const BarlowText = forwardRef<
         case '32px':
           return 'text-[20px] lg:text-[32px]'
         case '40px':
-          return 'text-[24px] lg:text-[40px]'
+          return 'text-[20px] md:text-[24px] lg:text-[40px]'
         case '64px':
           return 'text-[32px] lg:text-[55px] xl:text-[64px]'
         case '100px':
