@@ -4,7 +4,7 @@ import { Metadata } from 'next'
 import Image from 'next/image'
 
 export const metadata: Metadata = {
-  title: 'Depilacion Laser Lanzarote | Cookies',
+  title: 'Depilacion Laser Lanzarote | Politica de Cookies',
   description: 'Servicio de depilacion laser SHR en Lanzarote',
 }
 

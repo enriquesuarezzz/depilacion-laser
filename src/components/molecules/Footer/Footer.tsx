@@ -25,10 +25,18 @@ export default function Footer() {
                 className="me-4 text-gray-500 hover:underline md:me-6 dark:text-gray-400"
               />
             </Link>
-            {/* Cookies Link */}
-            <Link href="/cookies">
+            {/* Aviso Legal Link */}
+            <Link href="/aviso-legal">
               <BarlowText
-                text="Cookies"
+                text="Aviso Legal"
+                fontSize="16px"
+                className="me-4 text-gray-500 hover:underline md:me-6 dark:text-gray-400"
+              />
+            </Link>
+            {/* Cookies Link */}
+            <Link href="/politica-de-cookies">
+              <BarlowText
+                text="Política de Cookies"
                 fontSize="16px"
                 className="me-4 text-gray-500 hover:underline md:me-6 dark:text-gray-400"
               />
