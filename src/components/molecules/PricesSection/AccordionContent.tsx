@@ -52,6 +52,7 @@ const AccordionContent: React.FC<AccordionProps> = ({ woman, man }) => {
 
   return (
     <section className="flex flex-col gap-6">
+      {/* Create an accordion based on the woman and man props using the information from the Prices array */}
       {woman &&
         Prices.woman.map((item, index) => (
           <div key={index} className="flex flex-row p-4">

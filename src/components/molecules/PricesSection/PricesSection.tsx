@@ -32,7 +32,7 @@ export default function PricesSection() {
         />
       </div>
       <div className=" flex flex-col gap-10 md:flex-row md:gap-20 lg:gap-32">
-        {/* Woman section */}
+        {/* Woman section with image and accordion */}
         <div className="flex flex-col">
           <Image
             src={
@@ -48,7 +48,7 @@ export default function PricesSection() {
             <Accordion items={accordionWoman} />
           </div>
         </div>
-        {/* Men section */}
+        {/* Men section with image and accordion */}
         <div className="flex flex-col">
           <Image
             src={

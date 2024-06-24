@@ -1,6 +1,6 @@
 'use client'
 import React, { useState } from 'react'
-import { HoveredLink, Menu, MenuItem, ProductItem } from './NavbarLogic'
+import { HoveredLink, Menu, MenuItem } from './NavbarLogic' // Import components from NavbarLogic
 import { cn } from '@/utils/cn'
 
 export function NavbarComponent() {
@@ -12,13 +12,18 @@ export function NavbarComponent() {
 }
 
 function Navbar({ className }: { className?: string }) {
-  const [active, setActive] = useState<string | null>(null)
+  const [active, setActive] = useState<string | null>(null) // State to track active menu item
 
   return (
     <div
       className={cn('fixed inset-x-0 top-10 z-50 mx-auto max-w-2xl', className)}
     >
+      {' '}
+      {/* Navbar container with fixed positioning */}
       <Menu setActive={setActive}>
+        {' '}
+        {/* Menu component with setActive prop */}
+        {/* Menu items */}
         <MenuItem
           setActive={setActive}
           active={active}
@@ -65,7 +70,6 @@ function Navbar({ className }: { className?: string }) {
             </HoveredLink>
           </div>
         </MenuItem>
-
         <MenuItem
           setActive={setActive}
           active={active}

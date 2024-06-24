@@ -20,26 +20,30 @@ export const ImagesSlider = ({
   autoplay?: boolean
   direction?: 'up' | 'down'
 }) => {
-  const [currentIndex, setCurrentIndex] = useState(0)
-  const [loading, setLoading] = useState(false)
-  const [loadedImages, setLoadedImages] = useState<string[]>([])
+  const [currentIndex, setCurrentIndex] = useState(0) // State to track current image index
+  const [loading, setLoading] = useState(false) // State to track if images are loading
+  const [loadedImages, setLoadedImages] = useState<string[]>([]) // State to store loaded image URLs
 
+  // Function to handle next image transition
   const handleNext = () => {
     setCurrentIndex((prevIndex) =>
       prevIndex + 1 === images.length ? 0 : prevIndex + 1,
     )
   }
 
+  // Function to handle previous image transition
   const handlePrevious = () => {
     setCurrentIndex((prevIndex) =>
       prevIndex - 1 < 0 ? images.length - 1 : prevIndex - 1,
     )
   }
 
+  // Effect to load images when component mounts
   useEffect(() => {
     loadImages()
   }, [])
 
+  // Function to load images from URLs
   const loadImages = () => {
     setLoading(true)
     const loadPromises = images.map((image) => {
@@ -58,6 +62,8 @@ export const ImagesSlider = ({
       })
       .catch((error) => console.error('Failed to load images', error))
   }
+
+  // Effect to handle keyboard navigation and autoplay
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'ArrowRight') {
@@ -69,20 +75,21 @@ export const ImagesSlider = ({
 
     window.addEventListener('keydown', handleKeyDown)
 
-    // autoplay
+    // Autoplay functionality
     let interval: any
     if (autoplay) {
       interval = setInterval(() => {
         handleNext()
-      }, 5000)
+      }, 5000) // Autoplay interval duration (5 seconds)
     }
 
     return () => {
       window.removeEventListener('keydown', handleKeyDown)
-      clearInterval(interval)
+      clearInterval(interval) // Cleanup function to remove event listener and clear interval
     }
   }, [])
 
+  // Variants for image animation transitions
   const slideVariants = {
     initial: {
       scale: 0,
@@ -100,21 +107,21 @@ export const ImagesSlider = ({
     },
     upExit: {
       opacity: 1,
-      y: '-150%',
+      y: '-150%', // Exit animation direction for 'up'
       transition: {
         duration: 1,
       },
     },
     downExit: {
       opacity: 1,
-      y: '150%',
+      y: '150%', // Exit animation direction for 'down'
       transition: {
         duration: 1,
       },
     },
   }
 
-  const areImagesLoaded = loadedImages.length > 0
+  const areImagesLoaded = loadedImages.length > 0 // Boolean to check if images are loaded
 
   return (
     <div
@@ -123,18 +130,19 @@ export const ImagesSlider = ({
         className,
       )}
       style={{
-        perspective: '1000px',
+        perspective: '1000px', // Perspective for 3D effect
       }}
     >
-      {areImagesLoaded && children}
+      {areImagesLoaded && children}{' '}
+      {/* Display children if images are loaded */}
       {areImagesLoaded && overlay && (
         <div
           className={cn('absolute inset-0 z-40 bg-black/60', overlayClassName)}
         />
       )}
-
       {areImagesLoaded && (
         <AnimatePresence>
+          {/* Framer Motion's motion.img for animated image */}
           <motion.img
             key={currentIndex}
             src={loadedImages[currentIndex]}

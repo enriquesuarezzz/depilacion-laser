@@ -46,9 +46,10 @@ export default function OffersSwiper() {
           clickable: true,
           dynamicBullets: true,
         }}
-        modules={[Pagination]}
+        modules={[Pagination]} // Include pagination module
         className="mySwiper"
       >
+        {/* Swiper slides using array of information */}
         {swipers.map((item, index) => {
           return (
             <SwiperSlide key={index}>

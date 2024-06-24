@@ -1,11 +1,11 @@
 'use client'
-
 import { FC, useState } from 'react'
 import { useForm, SubmitHandler } from 'react-hook-form'
 import { sendEmail } from '@/utils/send-email'
 import Input from '../Input'
 import { BarlowText } from '@/components/atoms/BarlowText'
 
+// Define the structure of form data
 export type FormData = {
   name: string
   surname: string
@@ -16,30 +16,34 @@ export type FormData = {
 }
 
 const ContactForm: FC = () => {
+  // Form management using react-hook-form
   const {
     register,
     handleSubmit,
     reset,
     formState: { errors },
   } = useForm<FormData>()
-  const [isSending, setIsSending] = useState(false)
-  const [sendError, setSendError] = useState<string | null>(null)
-  const [sendSuccess, setSendSuccess] = useState<boolean | null>(null)
 
+  // State variables to manage form submission status
+  const [isSending, setIsSending] = useState(false) // Indicates if the form is currently being submitted
+  const [sendError, setSendError] = useState<string | null>(null) // Error message if sending email fails
+  const [sendSuccess, setSendSuccess] = useState<boolean | null>(null) // Success message after email is sent
+
+  // Function to handle form submission
   const onSubmit: SubmitHandler<FormData> = async (data) => {
-    setIsSending(true)
-    setSendError(null)
-    setSendSuccess(null)
+    setIsSending(true) // Set isSending to true to indicate form submission in progress
+    setSendError(null) // Clear any previous error messages
+    setSendSuccess(null) // Clear any previous success messages
 
     try {
-      await sendEmail(data)
-      setSendSuccess(true)
-      reset() // Clear the form fields
+      await sendEmail(data) // Call function to send email with form data
+      setSendSuccess(true) // Set sendSuccess to true upon successful submission
+      reset() // Clear the form fields using react-hook-form's reset method
     } catch (error) {
       console.error('Error sending email:', error)
-      setSendError('Failed to send email. Please try again later.')
+      setSendError('Failed to send email. Please try again later.') // Set error message if sending email fails
     } finally {
-      setIsSending(false)
+      setIsSending(false) // Set isSending back to false after submission attempt
     }
   }
 
@@ -54,7 +58,9 @@ const ContactForm: FC = () => {
     <>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="grid gap-4 lg:gap-6">
+          {/* Grid layout for form inputs */}
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:gap-6">
+            {/* Input fields for Name and Surname */}
             <div className="flex flex-col">
               <Input
                 id="name"
@@ -84,6 +90,7 @@ const ContactForm: FC = () => {
               )}
             </div>
           </div>
+          {/* Grid layout for Email and Phone */}
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:gap-6">
             <div className="flex flex-col">
               <Input
@@ -120,6 +127,7 @@ const ContactForm: FC = () => {
               )}
             </div>
           </div>
+          {/* Input field for Message */}
           <div className="flex flex-col">
             <Input
               textArea={true}
@@ -135,6 +143,7 @@ const ContactForm: FC = () => {
             )}
           </div>
         </div>
+        {/* Checkbox for Privacy Policy */}
         <div className="mb-4 flex flex-col items-start">
           <div className="flex items-center">
             <Input
@@ -157,6 +166,7 @@ const ContactForm: FC = () => {
             <span className="mt-2 text-red-500">{errors.checkbox.message}</span>
           )}
         </div>
+        {/* Submit Button */}
         <div className="mt-6 grid">
           <button
             type="submit"
@@ -166,10 +176,15 @@ const ContactForm: FC = () => {
             {isSending ? 'Enviando...' : 'Enviar'}
           </button>
         </div>
+        {/* Display error message if sending email fails */}
         {sendError && <div className="mt-4 text-red-500">{sendError}</div>}
+        {/* Display success message after successfully sending email */}
         {sendSuccess && (
-          <div className="mt-4 text-green-500">
-            ¡Hemos recibido tu consulta!
+          <div className="mt-4 ">
+            <BarlowText
+              text="Gracias por enviar tu consulta. Te responderemos lo antes posible."
+              className="text-green-500"
+            />
           </div>
         )}
       </form>

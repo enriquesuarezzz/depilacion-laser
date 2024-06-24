@@ -30,7 +30,7 @@ export default function AboutUs() {
         id="about_us_section"
         className="flex flex-col items-center justify-center pt-4 md:pt-10"
       >
-        {/* Section image for md and larger screens */}
+        {/* Image */}
         <Image
           src={
             process.env.NEXT_PUBLIC_IMAGES_PATH +
@@ -42,7 +42,7 @@ export default function AboutUs() {
           unoptimized
           className="max-h-[700px] object-contain pb-10 md:pb-16"
         />
-
+        {/* Feautures */}
         <div className="md:divide-dark-gray flex flex-col gap-4 md:flex-row md:divide-x lg:gap-6">
           {features.map((feature, index) => (
             <div
