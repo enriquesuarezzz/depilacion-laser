@@ -44,7 +44,7 @@ export const MenuItem = ({
         >
           {active === item && (
             <div
-              className={`absolute ${isLeftAligned ? 'left-0' : 'right-0'} top-[calc(100%_+_1.2rem)] transform overflow-x-auto pt-4`}
+              className={`absolute ${isLeftAligned ? '-left-10' : 'right-0'} top-[calc(100%_+_1.2rem)] transform overflow-x-auto pt-4`}
             >
               <motion.div
                 transition={transition}

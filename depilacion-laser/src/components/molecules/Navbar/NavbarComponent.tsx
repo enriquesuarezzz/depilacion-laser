@@ -65,19 +65,7 @@ function Navbar({ className }: { className?: string }) {
             </HoveredLink>
           </div>
         </MenuItem>
-        <MenuItem
-          setActive={setActive}
-          active={active}
-          item="Opiniones"
-          key={3}
-          index={3}
-        >
-          <div className="flex flex-col space-y-4 text-sm">
-            <HoveredLink href="/#reviews'">
-              ¡Expora opiniones de clientes!
-            </HoveredLink>
-          </div>
-        </MenuItem>
+
         <MenuItem
           setActive={setActive}
           active={active}
