@@ -10,10 +10,10 @@ export const metadata: Metadata = {
 
 export default function CookiesPage() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center">
+    <main>
       <Image
         src={'/images/contact/contact_background.jpg'}
-        alt="long beach club sign"
+        alt="laser depilation image"
         layout="responsive"
         width={1384}
         height={420}
@@ -21,7 +21,7 @@ export default function CookiesPage() {
         unoptimized
       />
       <SectionLayout>
-        <div className="w-full px-4">
+        <div className="mx-auto max-w-[1000px] items-center justify-center px-4">
           {/* main title */}
           <BarlowText
             text={'Política de Cookies'}

@@ -37,7 +37,7 @@ export default function OffersSwiper() {
     },
   ]
   return (
-    <div className="mx-auto max-w-[1000px] px-4 pt-20">
+    <div id={'offers'} className="mx-auto max-w-[1000px] px-4 pt-20">
       <Swiper
         spaceBetween={20}
         slidesPerView={'auto'}

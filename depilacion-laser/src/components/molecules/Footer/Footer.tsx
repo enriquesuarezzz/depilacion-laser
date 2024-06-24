@@ -4,21 +4,30 @@ import Link from 'next/link'
 
 export default function Footer() {
   return (
-    <footer className="bottom-0 flex w-full items-center bg-white shadow dark:bg-gray-900">
+    <footer className="bottom-0  w-full items-center bg-white shadow dark:bg-gray-900">
       <div className="mx-auto  max-w-screen-xl items-center p-4 md:py-8">
         <div className="flex items-center justify-between">
-          <div className=" mb-2 mt-2 flex w-full items-center  justify-center font-medium text-gray-500 sm:mb-0 md:mt-0 dark:text-gray-400">
-            <Link href="/contacto" className="me-4 hover:underline md:me-6">
-              Contacto
+          <div className=" mb-2 mt-2 flex w-full items-center  justify-center font-medium  sm:mb-0 md:mt-0 ">
+            <Link href="/contacto">
+              <BarlowText
+                text="Contacto"
+                fontSize="16px"
+                className="me-4 text-gray-500 hover:underline md:me-6 dark:text-gray-400"
+              />
             </Link>
-            <Link
-              href="/politica-de-privacidad"
-              className="me-4 hover:underline md:me-6"
-            >
-              Política de Privacidad
+            <Link href="/politica-de-privacidad">
+              <BarlowText
+                text="Política de Privacidad"
+                fontSize="16px"
+                className="me-4 text-gray-500 hover:underline md:me-6 dark:text-gray-400"
+              />
             </Link>
-            <Link href="/cookies" className="me-4 hover:underline md:me-6">
-              Cookies
+            <Link href="/cookies">
+              <BarlowText
+                text="Cookies"
+                fontSize="16px"
+                className="me-4 text-gray-500 hover:underline md:me-6 dark:text-gray-400"
+              />
             </Link>
           </div>
         </div>
