@@ -19,7 +19,9 @@ body::-webkit-scrollbar {
 body {
   -ms-overflow-style: none;
 }
-
+body {
+  font-family: 'Barlow', sans-serif;
+}
 section::-webkit-scrollbar {
   width: 0 !important;
 }
