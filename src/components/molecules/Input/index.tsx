@@ -9,7 +9,7 @@ interface InputProps {
   textArea?: boolean // Flag to determine if textarea should be rendered
   onChange?: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void // onChange event handler
   className?: string
-  register?: any // For registering input fields with React Hook Form or similar libraries
+  register?: any
 }
 
 const Input = forwardRef<HTMLInputElement | HTMLTextAreaElement, InputProps>(
@@ -22,7 +22,7 @@ const Input = forwardRef<HTMLInputElement | HTMLTextAreaElement, InputProps>(
             id={props.id}
             name={props.name}
             value={props.value}
-            className="font-satoshi-regular focus:peer h-20 w-full pt-2 text-base placeholder-transparent focus:outline-none"
+            className="font-satoshi-regular focus: peer h-20 w-full pt-2 text-base placeholder-transparent focus:outline-none"
             placeholder=""
             onChange={props.onChange}
             {...props.register} // Spread additional props for integration with form libraries
@@ -34,7 +34,7 @@ const Input = forwardRef<HTMLInputElement | HTMLTextAreaElement, InputProps>(
             type={type}
             name={props.name}
             value={props.value}
-            className="font-satoshi-regular focus:peer h-10 w-full rounded-none pt-2 text-base placeholder-transparent focus:outline-none"
+            className="font-satoshi-regular focus: peer h-10 w-full rounded-none pt-2 text-base placeholder-transparent focus:outline-none"
             placeholder=""
             onChange={props.onChange}
             {...props.register} // Spread additional props for integration with form libraries
