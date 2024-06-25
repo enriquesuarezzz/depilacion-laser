@@ -41,7 +41,7 @@ export const ImagesSlider = ({
   // Effect to load images when component mounts
   useEffect(() => {
     loadImages()
-  }, [])
+  })
 
   // Function to load images from URLs
   const loadImages = () => {
@@ -87,7 +87,7 @@ export const ImagesSlider = ({
       window.removeEventListener('keydown', handleKeyDown)
       clearInterval(interval) // Cleanup function to remove event listener and clear interval
     }
-  }, [])
+  })
 
   // Variants for image animation transitions
   const slideVariants = {
