@@ -5,7 +5,7 @@ import Link from 'next/link'
 export default function Footer() {
   return (
     <footer className="bottom-0 w-full items-center bg-white shadow dark:bg-gray-900">
-      <div className="mx-auto max-w-screen-xl items-center p-4 md:py-8">
+      <div className=" mx-auto max-w-screen-xl items-center p-4 md:py-8">
         {/* Navigation Links */}
         <div className="flex items-center justify-between">
           <div className="mb-2 mt-2 flex w-full items-center justify-center font-medium sm:mb-0 md:mt-0">
@@ -14,7 +14,7 @@ export default function Footer() {
               <BarlowText
                 text="Contacto"
                 fontSize="16px"
-                className="me-4 text-gray-500 hover:underline md:me-6 dark:text-gray-400"
+                className="me-4 pl-4 text-gray-500 hover:underline md:me-6 dark:text-gray-400"
               />
             </Link>
             {/* Privacy Policy Link */}
@@ -22,13 +22,21 @@ export default function Footer() {
               <BarlowText
                 text="Política de Privacidad"
                 fontSize="16px"
+                className="me-4 pl-4 text-gray-500 hover:underline md:me-6 dark:text-gray-400"
+              />
+            </Link>
+            {/* Aviso Legal Link */}
+            <Link href="/aviso-legal">
+              <BarlowText
+                text="Aviso Legal"
+                fontSize="16px"
                 className="me-4 text-gray-500 hover:underline md:me-6 dark:text-gray-400"
               />
             </Link>
             {/* Cookies Link */}
-            <Link href="/cookies">
+            <Link href="/politica-de-cookies">
               <BarlowText
-                text="Cookies"
+                text="Política de Cookies"
                 fontSize="16px"
                 className="me-4 text-gray-500 hover:underline md:me-6 dark:text-gray-400"
               />
@@ -50,7 +58,7 @@ export default function Footer() {
           {/* Instagram Link */}
           <Link
             href="https://www.instagram.com/enriquesuarezzz/"
-            className="my-auto flex justify-center"
+            className="my-auto flex h-6  justify-center md:h-5"
           >
             <BarlowText
               text="enriquesuarezzz"

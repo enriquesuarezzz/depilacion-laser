@@ -3,6 +3,7 @@ import { Barlow, Inter, Mulish } from 'next/font/google'
 import './globals.css'
 import Footer from '@/components/molecules/Footer/Footer'
 import { NavbarComponent } from '@/components/molecules/Navbar/NavbarComponent'
+import CookiesPopup from '@/components/molecules/CookiesPopUp/CookiesPopUp'
 
 export const barlow = Barlow({
   subsets: ['latin'],
@@ -24,6 +25,7 @@ export default function RootLayout({
       <body className={`${barlow.className} flex flex-col`}>
         {children}
         <NavbarComponent />
+        <CookiesPopup />
         <Footer />
       </body>
     </html>

@@ -2,6 +2,7 @@
 import React, { useState } from 'react'
 import { HoveredLink, Menu, MenuItem } from './NavbarLogic' // Import components from NavbarLogic
 import { cn } from '@/utils/cn'
+import { BarlowText } from '@/components/atoms/BarlowText'
 
 export function NavbarComponent() {
   return (
@@ -33,14 +34,29 @@ function Navbar({ className }: { className?: string }) {
         >
           <div className="flex flex-col space-y-4  text-sm">
             <HoveredLink href="/#card0">
-              ¿Por qué depilación laser SHR?
+              <BarlowText
+                text="¿Por qué depilación laser SHR?"
+                className="text-black hover:text-gray-300 dark:text-white "
+              />
             </HoveredLink>
-            <HoveredLink href="/#card1">Ventajas</HoveredLink>
+            <HoveredLink href="/#card1">
+              {' '}
+              <BarlowText
+                text="Ventajas"
+                className="text-black hover:text-gray-300 dark:text-white "
+              />
+            </HoveredLink>
             <HoveredLink href="/#card2">
-              ¿La depilación laser SHR duele?
+              <BarlowText
+                text="¿La depilación laser SHR duele?"
+                className="text-black hover:text-gray-300 dark:text-white "
+              />
             </HoveredLink>
             <HoveredLink href="/#card3">
-              ¿Es permanente la depilación laser SHR?
+              <BarlowText
+                text="¿Es permanente la depilación laser SHR?"
+                className="text-black hover:text-gray-300 dark:text-white "
+              />
             </HoveredLink>
           </div>
         </MenuItem>
@@ -53,7 +69,10 @@ function Navbar({ className }: { className?: string }) {
         >
           <div className="flex flex-col space-y-4 text-sm">
             <HoveredLink href="/#about_us_section">
-              Conoce nuestra especialista
+              <BarlowText
+                text="Conoce nuestra especialista"
+                className="text-black hover:text-gray-300 dark:text-white "
+              />
             </HoveredLink>
           </div>
         </MenuItem>
@@ -66,7 +85,10 @@ function Navbar({ className }: { className?: string }) {
         >
           <div className="flex flex-col space-y-4 text-sm">
             <HoveredLink href="/#offers">
-              ¡Observa nuestras promociones!
+              <BarlowText
+                text="¡Observa nuestras promociones!"
+                className="text-black hover:text-gray-300 dark:text-white "
+              />
             </HoveredLink>
           </div>
         </MenuItem>
@@ -79,7 +101,10 @@ function Navbar({ className }: { className?: string }) {
         >
           <div className="flex flex-col space-y-4 text-sm">
             <HoveredLink href="/contacto">
-              ¿Quieres que te contemos más?
+              <BarlowText
+                text="¿Quieres que te contemos más?"
+                className="text-black hover:text-gray-300 dark:text-white "
+              />
             </HoveredLink>
           </div>
         </MenuItem>
