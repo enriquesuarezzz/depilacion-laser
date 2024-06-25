@@ -1,7 +1,7 @@
 import { BarlowText } from '@/components/atoms/BarlowText'
 import SectionLayout from '@/components/atoms/SectionLayout/SectionLayout'
 import AboutUS from '@/components/molecules/AboutUs/AboutUs'
-import { ImagesSliderComponent } from '@/components/molecules/ImagesSlider.tsx/ImagesSliderComponent'
+import { ImagesSliderComponent } from '@/components/molecules/ImagesSlider/ImagesSliderComponent'
 import PricesSection from '@/components/molecules/PricesSection/PricesSection'
 import ReviewsSection from '@/components/molecules/ReviewsSection/ReviewsSection'
 import DemoSlider from '@/components/molecules/offers/OffersSwiper'
