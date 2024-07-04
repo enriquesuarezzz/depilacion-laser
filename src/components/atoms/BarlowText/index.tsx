@@ -52,7 +52,7 @@ export const BarlowText = forwardRef<
         case '14px':
           return 'text-[14px]'
         case '16px':
-          return 'text-[14px]'
+          return 'text-[16px]'
         case '20px':
           return 'text-base lg:text-[20px]'
         case '24px':
