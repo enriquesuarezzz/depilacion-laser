@@ -41,7 +41,7 @@ export const ImagesSlider = ({
   // Effect to load images when component mounts
   useEffect(() => {
     loadImages()
-  })
+  }, [])
 
   // Function to load images from URLs
   const loadImages = () => {
@@ -75,19 +75,19 @@ export const ImagesSlider = ({
 
     window.addEventListener('keydown', handleKeyDown)
 
-    // Autoplay functionality
+    // Autoplay
     let interval: any
     if (autoplay) {
       interval = setInterval(() => {
         handleNext()
-      }, 5000) // Autoplay interval duration (5 seconds)
+      }, 5000)
     }
 
     return () => {
       window.removeEventListener('keydown', handleKeyDown)
       clearInterval(interval) // Cleanup function to remove event listener and clear interval
     }
-  })
+  }, [])
 
   // Variants for image animation transitions
   const slideVariants = {
@@ -107,14 +107,14 @@ export const ImagesSlider = ({
     },
     upExit: {
       opacity: 1,
-      y: '-150%', // Exit animation direction for 'up'
+      y: '-150%',
       transition: {
         duration: 1,
       },
     },
     downExit: {
       opacity: 1,
-      y: '150%', // Exit animation direction for 'down'
+      y: '150%',
       transition: {
         duration: 1,
       },
@@ -130,19 +130,18 @@ export const ImagesSlider = ({
         className,
       )}
       style={{
-        perspective: '1000px', // Perspective for 3D effect
+        perspective: '1000px',
       }}
     >
-      {areImagesLoaded && children}{' '}
-      {/* Display children if images are loaded */}
+      {areImagesLoaded && children}
       {areImagesLoaded && overlay && (
         <div
           className={cn('absolute inset-0 z-40 bg-black/60', overlayClassName)}
         />
       )}
+
       {areImagesLoaded && (
         <AnimatePresence>
-          {/* Framer Motion's motion.img for animated image */}
           <motion.img
             key={currentIndex}
             src={loadedImages[currentIndex]}
