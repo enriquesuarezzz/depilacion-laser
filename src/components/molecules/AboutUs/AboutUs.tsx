@@ -32,17 +32,14 @@ export default function AboutUs() {
       >
         {/* Image */}
         <Image
-          src={
-            process.env.NEXT_PUBLIC_IMAGES_PATH +
-            '/images/about_us_placeholder.jpg'
-          }
+          src={process.env.NEXT_PUBLIC_IMAGES_PATH + '/images/about_us.avif'}
           alt="About Us Image"
           width={1200}
           height={600}
           unoptimized
           className="max-h-[700px] object-contain pb-10 md:pb-16"
         />
-        {/* Feautures */}
+        {/* Features */}
         <div className="md:divide-dark-gray flex flex-col gap-4 md:flex-row md:divide-x lg:gap-6">
           {features.map((feature, index) => (
             <div
