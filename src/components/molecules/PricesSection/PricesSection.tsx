@@ -54,7 +54,7 @@ export default function PricesSection() {
             src={
               process.env.NEXT_PUBLIC_IMAGES_PATH + '/images/prices_man.avif'
             }
-            alt="Man smiling with a towel in his hands"
+            alt="Man with a towel in his hands"
             width={500}
             height={500}
             unoptimized

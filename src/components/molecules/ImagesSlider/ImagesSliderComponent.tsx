@@ -8,10 +8,9 @@ import { BarlowText } from '@/components/atoms/BarlowText'
 export function ImagesSliderComponent() {
   // Array of image paths, using environment variables for dynamic paths
   const images = [
-    process.env.NEXT_PUBLIC_IMAGES_PATH +
-      '/images/prices_cards_section/depilation_example1.jpg',
-    process.env.NEXT_PUBLIC_IMAGES_PATH + '/images/cards_section/card2.jpg',
-    process.env.NEXT_PUBLIC_IMAGES_PATH + '/images/cards_section/card4.jpg',
+    process.env.NEXT_PUBLIC_IMAGES_PATH + '/images/header_image1.avif',
+    process.env.NEXT_PUBLIC_IMAGES_PATH + '/images/header_image2.avif',
+    process.env.NEXT_PUBLIC_IMAGES_PATH + '/images/header_image3.avif',
   ]
 
   return (

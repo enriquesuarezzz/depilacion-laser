@@ -18,7 +18,7 @@ export default function ContactPage() {
       <section className="flex flex-col">
         {/* header image */}
         <Image
-          src={'/images/contact/contact_background.jpg'}
+          src={'/images/contact/contact_header.avif'}
           alt="laser depilation image"
           layout="responsive"
           width={1384}

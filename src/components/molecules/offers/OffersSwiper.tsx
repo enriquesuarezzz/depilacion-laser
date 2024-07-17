@@ -12,28 +12,22 @@ import Link from 'next/link'
 export default function OffersSwiper() {
   const swipers = [
     {
-      image: `${process.env.NEXT_PUBLIC_IMAGES_PATH + '/images/prices_cards_section/depilation_example1.jpg'}`,
+      image: `${process.env.NEXT_PUBLIC_IMAGES_PATH + '/images/swiper/swiper_image1.avif'}`,
       alt: 'Depilation example',
       description:
-        'Aprovecha esta oferta exclusiva y disfruta de una piel suave y sin vello. ¡No te lo pierdas!',
+        '<b>Este mes 20% en todas las sesiones, disfruta de una piel suave y sin vello. ¡No te lo pierdas!</b>',
     },
     {
-      image: `${process.env.NEXT_PUBLIC_IMAGES_PATH + '/images/about_us.jpg'}`,
+      image: `${process.env.NEXT_PUBLIC_IMAGES_PATH + '/images/swiper/swiper_image2.avif'}`,
       alt: 'Depilation example',
       description:
-        'Trae a un amigo y consigue un 2x1 en una sesion de depilación. ¡No te lo pierdas!',
+        '<b>Trae a un amigo y consigue un 2x1 en una sesion de depilación.</b>',
     },
     {
-      image: `${process.env.NEXT_PUBLIC_IMAGES_PATH + '/images/prices_cards_section/depilation_example1.jpg'}`,
+      image: `${process.env.NEXT_PUBLIC_IMAGES_PATH + '/images/swiper/swiper_image3.avif'}`,
       alt: 'Depilation example',
       description:
-        '50% de descuento en todas las sesiones de depilación. ¡No te lo pierdas!',
-    },
-    {
-      image: `${process.env.NEXT_PUBLIC_IMAGES_PATH + '/images/about_us.jpg'}`,
-      alt: 'Depilation example',
-      description:
-        'Aprovecha esta oferta exclusiva y disfruta de una piel suave y sin vello. ¡No te lo pierdas!',
+        '<b>30% de descuento durante todo el verano en piernas y axilas</b>',
     },
   ]
   return (
@@ -61,7 +55,7 @@ export default function OffersSwiper() {
                     width={300}
                     height={400}
                     unoptimized
-                    className="rounded-lg shadow-md"
+                    className="h-full max-h-[400px] w-full max-w-[300px] rounded-lg shadow-md"
                   />
                 </div>
                 <div className="flex flex-col items-center justify-center gap-1 text-gray-800 md:gap-8">

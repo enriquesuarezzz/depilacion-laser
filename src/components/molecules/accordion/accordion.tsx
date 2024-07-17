@@ -24,7 +24,7 @@ const Accordion: React.FC<AccordionProps> = ({ items }) => {
   }
 
   return (
-    <div className="mx-auto w-full max-w-md rounded-md border border-gray-200">
+    <div className="mx-auto w-full max-w-md  rounded-md border border-gray-200">
       {items.map((item, index) => (
         <div key={index} className="border-b border-gray-200">
           <button
@@ -45,7 +45,7 @@ const Accordion: React.FC<AccordionProps> = ({ items }) => {
                 openIndex === index ? `${getContentHeight(index)}px` : '0px', // Set maxHeight based on open/close state
             }}
           >
-            <div className="bg-gray-100 p-4">{item.content}</div>{' '}
+            <div className="bg-gray-100 p-1">{item.content}</div>{' '}
             {/* Render content of the accordion item */}
           </div>
         </div>
