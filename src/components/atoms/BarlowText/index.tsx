@@ -12,16 +12,17 @@ export interface BarlowTextProps {
   tag?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p'
   style?: 'light' | 'normal' | 'semibold' | 'bold'
   fontSize?:
-    | '100px'
-    | '64px'
-    | '40px'
-    | '32px'
-    | '26px'
-    | '24px'
-    | '20px'
-    | '16px'
-    | '14px'
     | '12px'
+    | '14px'
+    | '16px'
+    | '20px'
+    | '24px'
+    | '26px'
+    | '32px'
+    | '40px'
+    | '64px'
+    | '100px'
+
   leading?: 'normal' | 'none' | 'tight' | 'snug' | 'relaxed' | 'loose'
   className?: string
 }

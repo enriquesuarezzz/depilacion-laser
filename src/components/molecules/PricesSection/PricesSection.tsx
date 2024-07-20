@@ -6,18 +6,21 @@ import AccordionContent from './AccordionContent'
 export default function PricesSection() {
   const accordionWoman = [
     {
-      title: 'Precios woman',
+      title: 'Precios mujer',
       content: <AccordionContent woman />,
     },
   ]
   const accordionMan = [
     {
-      title: 'Precios men',
+      title: 'Precios hombre',
       content: <AccordionContent man />,
     },
   ]
   return (
-    <section className="mx-auto flex flex-col items-center justify-center pt-16 md:pt-20 lg:pt-32 ">
+    <section
+      id="prices"
+      className="mx-auto flex flex-col items-center justify-center pt-16 md:pt-20 lg:pt-32 "
+    >
       {/* title and subtitle */}
       <div className="flex flex-col items-center justify-center">
         <BarlowText

@@ -31,7 +31,7 @@ export default function OffersSwiper() {
     },
   ]
   return (
-    <div id={'offers'} className="mx-auto max-w-[1000px] px-4 pt-20">
+    <div className="mx-auto mb-6 max-w-[1000px] px-4 pt-20 md:mb-16">
       <Swiper
         spaceBetween={20}
         slidesPerView={'auto'}
@@ -47,7 +47,7 @@ export default function OffersSwiper() {
         {swipers.map((item, index) => {
           return (
             <SwiperSlide key={index}>
-              <div className="flex flex-col items-center gap-6 rounded-lg  p-6  transition-transform duration-500 hover:scale-105 md:flex-row md:gap-12 lg:gap-16">
+              <div className=" flex flex-col items-center gap-6 rounded-lg  p-6  transition-transform duration-500 hover:scale-105 md:flex-row md:gap-12 lg:gap-16">
                 <div className="flex-shrink-0">
                   <Image
                     src={item.image}
@@ -87,9 +87,6 @@ export default function OffersSwiper() {
           )
         })}
       </Swiper>
-      <div className="mt-4 flex justify-center">
-        <div className="swiper-pagination"></div>
-      </div>
     </div>
   )
 }

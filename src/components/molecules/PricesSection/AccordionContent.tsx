@@ -12,19 +12,19 @@ const AccordionContent: React.FC<AccordionProps> = ({ woman, man }) => {
     man: [
       {
         title: 'Zonas Pequeñas',
-        price: '10€',
+        price: '12€',
         description:
           'GENITALES, NUCA, CUELLO, OREJAS, ENTRECEJO, MANOS, MEJILLAS, PIES, LÍNEA ALBA, AREOLAS, LABIO SUPERIOR, MENTÓN, SIENES O PATILLAS',
       },
       {
         title: 'Zonas Medianas',
-        price: '20€',
+        price: '25€',
         description:
           'FACIAL COMPLETO, LÍNEA INTERGLÚTEA, HOMBROS, ANTEBRAZOS, PERFILADO DE BARBA, PUBIS O INGLES BRASILEÑAS',
       },
       {
         title: 'Zonas Grandes',
-        price: '30€',
+        price: '35€',
         description:
           'GLÚTEOS, BRAZOS COMPLETOS, ESPALDA, LUMBOSACRA, TÓRAX, ABDOMEN, ZONA ÍNTIMA COMPLETA O MEDIAS PIERNAS',
       },
