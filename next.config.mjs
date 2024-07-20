@@ -9,7 +9,7 @@ const nextConfig = {
       {
         protocol: 'https',
         hostname:
-          'www.depilacion-laser-git-main-enriquesuarezzzs-projects.vercel.app/',
+          'www.depilacion-laser-git-main-enriquesuarezzzs-projects.vercel.app',
       },
     ],
   },
