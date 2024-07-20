@@ -79,14 +79,14 @@ function Navbar({ className }: { className?: string }) {
         <MenuItem
           setActive={setActive}
           active={active}
-          item="Ofertas"
+          item="Precios"
           key={2}
           index={2}
         >
           <div className="flex flex-col space-y-4 text-sm">
-            <HoveredLink href="/#offers">
+            <HoveredLink href="/#prices">
               <BarlowText
-                text="¡Observa nuestras promociones!"
+                text="¡Precios y ofertas únicos!"
                 className="text-black hover:text-gray-300 dark:text-white "
               />
             </HoveredLink>

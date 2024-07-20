@@ -68,9 +68,9 @@ export default function ContactPage() {
                 className="mt-2 text-gray-500"
               />
               {/* mail link */}
-              <Link href="mailto:correoElectronico@gmail.com">
+              <Link href="mailto:depilacionlasershr.com">
                 <BarlowText
-                  text="correoElectronico@gmail.com"
+                  text="depilacionlasershr.com"
                   fontSize="16px"
                   className="mt-2 text-blue-500"
                 />

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Barlow, Inter, Mulish } from 'next/font/google'
+import { Barlow } from 'next/font/google'
 import './globals.css'
 import Footer from '@/components/molecules/Footer/Footer'
 import { NavbarComponent } from '@/components/molecules/Navbar/NavbarComponent'
