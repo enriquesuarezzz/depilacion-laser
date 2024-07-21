@@ -24,7 +24,7 @@ export default function OffersSwiper() {
         '<b>Trae a un amigo y consigue un 2x1 en una sesion de depilación.</b>',
     },
     {
-      image: `${process.env.NEXT_PUBLIC_IMAGES_PATH + '/images/swiper/swiper_image3.avif'}`,
+      image: '/images/swiper/swiper_image3.avif',
       alt: 'Depilation example',
       description:
         '<b>30% de descuento durante todo el verano en piernas y axilas</b>',
