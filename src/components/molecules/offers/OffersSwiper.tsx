@@ -12,13 +12,13 @@ import Link from 'next/link'
 export default function OffersSwiper() {
   const swipers = [
     {
-      image: `${process.env.NEXT_PUBLIC_IMAGES_PATH + '/images/swiper/swiper_image1.avif'}`,
+      image: '/images/swiper/swiper_image1.avif',
       alt: 'Depilation example',
       description:
         '<b>Este mes 20% en todas las sesiones, disfruta de una piel suave y sin vello. ¡No te lo pierdas!</b>',
     },
     {
-      image: `${process.env.NEXT_PUBLIC_IMAGES_PATH + '/images/swiper/swiper_image2.avif'}`,
+      image: '/images/swiper/swiper_image2.avif',
       alt: 'Depilation example',
       description:
         '<b>Trae a un amigo y consigue un 2x1 en una sesion de depilación.</b>',

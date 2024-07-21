@@ -38,9 +38,7 @@ export default function PricesSection() {
         {/* Woman section with image and accordion */}
         <div className="flex flex-col">
           <Image
-            src={
-              process.env.NEXT_PUBLIC_IMAGES_PATH + '/images/prices_woman.avif'
-            }
+            src={'/images/prices_woman.avif'}
             alt="Woman touching his face with a towel in her head"
             width={500}
             height={500}
@@ -54,9 +52,7 @@ export default function PricesSection() {
         {/* Men section with image and accordion */}
         <div className="flex flex-col">
           <Image
-            src={
-              process.env.NEXT_PUBLIC_IMAGES_PATH + '/images/prices_man.avif'
-            }
+            src={'/images/prices_man.avif'}
             alt="Man with a towel in his hands"
             width={500}
             height={500}

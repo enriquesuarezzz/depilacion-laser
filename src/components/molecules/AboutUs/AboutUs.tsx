@@ -1,5 +1,4 @@
 import { BarlowText } from '@/components/atoms/BarlowText'
-import SectionLayout from '@/components/atoms/SectionLayout/SectionLayout'
 import { IVerified } from '@/components/atoms/Svg/IVerified'
 import Image from 'next/image'
 
@@ -32,7 +31,7 @@ export default function AboutUs() {
       >
         {/* Image */}
         <Image
-          src={process.env.NEXT_PUBLIC_IMAGES_PATH + '/images/about_us.avif'}
+          src={'/images/about_us.avif'}
           alt="About Us Image"
           width={1200}
           height={600}
