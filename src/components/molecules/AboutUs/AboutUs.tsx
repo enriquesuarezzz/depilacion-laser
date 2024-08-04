@@ -11,7 +11,7 @@ export default function AboutUs() {
   const features = [
     {
       title: 'Profesionalidad  ',
-      description: 'Curso en estetica.........',
+      description: 'Curso en Estética Profesional',
     },
     {
       title: '5 años de Experiencia ',
