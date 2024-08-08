@@ -33,6 +33,12 @@ function Navbar({ className }: { className?: string }) {
           key={0}
         >
           <div className="flex flex-col space-y-4  text-sm">
+            <HoveredLink href="/">
+              <BarlowText
+                text="Inicio"
+                className="text-black hover:text-gray-300 dark:text-white "
+              />
+            </HoveredLink>
             <HoveredLink href="/#card0">
               <BarlowText
                 text="¿Por qué depilación laser SHR?"
