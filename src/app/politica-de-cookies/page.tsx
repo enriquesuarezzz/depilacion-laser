@@ -12,7 +12,7 @@ export default function CookiesPage() {
   return (
     <main>
       <Image
-        src={'/images/contact/contact_background.jpg'}
+        src={'/images/contact/contact_header.avif'}
         alt="laser depilation image"
         layout="responsive"
         width={1384}
