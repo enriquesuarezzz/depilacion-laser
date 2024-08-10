@@ -32,7 +32,7 @@ export default function AboutUs() {
         {/* Image */}
         <Image
           src={'/images/about_us.avif'}
-          alt="About Us Image"
+          alt="Our Specialist performing a depilation"
           width={1200}
           height={600}
           unoptimized

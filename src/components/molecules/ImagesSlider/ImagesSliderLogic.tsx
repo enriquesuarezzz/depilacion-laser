@@ -149,6 +149,7 @@ export const ImagesSlider = ({
             animate="visible"
             exit={direction === 'up' ? 'upExit' : 'downExit'}
             variants={slideVariants}
+            alt="Depilacion Laser image"
             className="image absolute inset-0 h-full w-full object-cover object-center"
           />
         </AnimatePresence>
