@@ -13,6 +13,19 @@ const nextConfig = {
       },
     ],
   },
+  async headers() {
+    return [
+      {
+        source: '/(.*)', // Apply to all pages
+        headers: [
+          {
+            key: 'x-robots-tag',
+            value: 'index', // Allow indexing
+          },
+        ],
+      },
+    ]
+  },
 }
 
 export default nextConfig
