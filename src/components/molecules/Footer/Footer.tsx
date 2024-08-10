@@ -48,7 +48,7 @@ export default function Footer() {
         <hr className="my-4 border-gray-200 sm:mx-auto lg:my-8 dark:border-gray-700" />
 
         {/* Social Media Links */}
-        <div className="flex justify-center gap-2 pt-0">
+        <div className="flex items-center justify-center gap-2 pt-0">
           {/* "Created by" Text */}
           <BarlowText
             text="Created by"
@@ -58,7 +58,7 @@ export default function Footer() {
           {/* Instagram Link */}
           <Link
             href="https://www.instagram.com/enriquesuarezzz/"
-            className="my-auto flex h-6  justify-center md:h-5"
+            className="my-auto flex h-6 items-start md:h-5  md:items-center"
           >
             <BarlowText
               text="enriquesuarezzz"
